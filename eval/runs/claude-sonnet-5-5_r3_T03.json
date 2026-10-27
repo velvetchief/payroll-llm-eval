@@ -1,0 +1,23 @@
+{
+ "task_id": "T03",
+ "run": 3,
+ "prompt": "An employee moves from Oregon to Washington mid-month but works remote for a New York company. Which taxes apply and from when?",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "# Mid-month move from Oregon to Washington, working remotely for a New York employer\n\n**Short version:** Federal taxes don't change. Oregon and Washington obligations split at the move date, and New York may still claim the wages under its \"convenience of the employer\" rule.\n\n## 1. Federal (no change)\n- Federal income tax withholding, Social Security and Medicare, and FUTA continue as normal.\n\n## 2. Oregon: through the last day of residency and work in Oregon\n- **Oregon income tax withholding** applies to wages earned through the move date. The employee becomes a part-year resident and files an Oregon return for that period.\n- **Statewide Transit Tax** (0.1% of wages) and **Paid Leave Oregon** contributions apply to wages for work performed in Oregon.\n- **Oregon SUI and Workers' Benefit Fund** apply to the Oregon portion of work.\n- Stop Oregon withholding for work performed after the move. Don't apply it to the whole pay period.\n\n## 3. Washington: from the first day of work performed in Washington\n- **No state income tax** on wages.\n- **WA Paid Family & Medical Leave** premiums (employer and employee shares) apply.\n- **WA Cares Fund** (long-term care) premium of 0.58% of wages applies, unless the employee holds an approved exemption.\n- **WA unemployment insurance** reporting begins for wages earned while working in Washington.\n- **WA L&I workers' comp** premiums apply, since Washington is a monopolistic state fund and premiums are typically based on hours worked there.\n- The employer must be registered with WA ESD and L&I. If it isn't, registration is likely needed now.\n\n## 4. New York: the possible wild card\n- If the employee's assigned or primary office is in New York, and they work remotely for their own convenience rather than the employer's necessity, New York treats the remote workdays as NY-source income. The employer would then withhold NY income tax even though the employee lives in Oregon or Washington.\n- If the employee was hired as a fully remote worker with no assigned NY office, or the remote work is a genuine employer requirement, NY generally does not tax those wages.\n- **Oregon period:** Oregon taxes residents on all income, so the employee would claim a credit for NY tax on their Oregon return.\n- **Washington period:** there is no credit mechanism and no WA tax, so NY tax would be the only income tax.\n- NYC and Yonkers taxes don't apply to nonresidents.\n- NY SUI, SDI, and PFL generally don't apply, since the work is performed in OR or WA.\n\n## 5. Payroll steps\n1. Get the exact move date and the work location for each day in the pay period.\n2. Prorate the mid-month pay period by workdays in Oregon and Washington.\n3. Update the employee's home and work address and state tax setup, and end Oregon withholding as of the move date.\n4. Set up the WA premiums and registrations above.\n5. Confirm with HR and tax counsel whether the NY convenience rule applies, and set up NY withholding if it does.\n6. Tell the employee to expect a part-year Oregon return and possibly a NY nonresident return (IT-203).\n\n**Caveat:** State rules on SUI localization and the NY convenience rule are fact-dependent. Confirm with the state agencies or your tax advisor before finalizing.",
+ "usage": {
+  "input_tokens": 68,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 2681,
+  "output_tokens_details": {
+   "thinking_tokens": 1569
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "task_id": "T05",
+ "run": 1,
+ "prompt": "An employee in California quits with no notice on Friday. When is final pay due, and what must it include?",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "**California final pay when an employee quits without notice**\n\n**Deadline**\nUnder California Labor Code \u00a7202, if an employee quits without giving at least 72 hours' notice, final wages are due **within 72 hours of the resignation**. Since the employee quit on Friday, payment is due by **Monday** (the same time of day as the resignation, counting 72 hours). The 72 hours are calendar hours, so weekends count.\n\nIf the employee had given 72 hours or more of notice, final pay would be due **on the last day worked**.\n\n**Where and how to pay**\n- Payment is generally made at the work location or by mail if the employee requests it in writing (in which case mail to the designated address, and the date of mailing is considered the payment date).\n- Final pay should be a check or, if the employee agrees, direct deposit. Many employers issue a paper check so the final payment is in the employee's hands on time.\n\n**What must be included**\n1. **All earned wages** through the last day worked, including regular wages, overtime, double-time, and any commissions or bonuses already earned.\n2. **All accrued, unused vacation/PTO**, paid at the final rate of pay (Labor Code \u00a7227.3). Vacation is treated as earned wages, and \"use it or lose it\" policies are unlawful in California.\n3. **Reimbursable business expenses** the employee incurred (Labor Code \u00a72802), typically handled with final pay or promptly after.\n4. **Any other wages owed**, such as unpaid meal/rest break premiums, and any applicable reporting time or other premium pay.\n\n**Not required to be paid out**\n- Accrued sick leave (unless company policy provides otherwise), though if PTO is a combined bucket, it is treated as vacation and must be paid.\n\n**Itemized wage statement**\nProvide a final wage statement meeting Labor Code \u00a7226 requirements (hours, rates, deductions, etc.).\n\n**Deductions**\nOnly lawful deductions (taxes, authorized benefit deductions) are allowed. Do not withhold final pay for unreturned equipment, unless it is a lawful deduction with proper authorization. Withholding wages to offset a debt or a loss is generally prohibited.\n\n**Penalties for late payment**\nUnder Labor Code \u00a7203, \"waiting time penalties\" accrue at the employee's **daily rate of pay for each day the wages remain unpaid, up to 30 days**. Penalties can apply if the late payment is willful. Additional penalties can arise for wage statement violations.\n\n**Other recommended steps**\n- Provide the **Notice to Employee as to Change in Relationship (EDD DE 2320)** and information on unemployment insurance.\n- Provide **COBRA/Cal-COBRA** information.\n- Provide any required notices on health coverage and the final wage statement.\n\n**Action item:** Calculate final pay now and have the check ready by **Monday** at the latest.",
+ "usage": {
+  "input_tokens": 58,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 939,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

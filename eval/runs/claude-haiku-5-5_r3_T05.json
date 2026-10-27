@@ -1,0 +1,23 @@
+{
+ "task_id": "T05",
+ "run": 3,
+ "prompt": "An employee in California quits with no notice on Friday. When is final pay due, and what must it include?",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "**Deadline:** Because the employee quit without giving notice, final wages are due **within 72 hours** of quitting (Labor Code \u00a7202). Friday's quit makes the deadline **Monday at the same time of day** (weekends count). Paying earlier is fine. If the employee had given 72 hours' notice, final pay would be due at the time of quitting.\n\n**What the final paycheck must include:**\n\n- **All earned wages** through the last day worked, at the correct rate, including any unpaid hours.\n- **Overtime and premiums**, such as daily or weekly overtime, double time, and meal or rest period premiums owed.\n- **Commissions and bonuses** that were earned under the plan's terms.\n- **Accrued, unused vacation/PTO.** California requires payout of vested vacation time (\u00a7227.3). \"Use it or lose it\" policies are not enforceable, and the balance cannot be forfeited.\n- **Unreimbursed business expenses** owed under \u00a72802.\n- **Minimum wage compliance** for the final pay period.\n\n**Other requirements:**\n\n- **Itemized wage statement** (\u00a7226) showing gross wages, deductions, net pay, and hours.\n- **Only legally permitted deductions.** Don't withhold for unreturned property or other amounts unless the law allows it.\n- **No conditions.** Final pay can't be tied to signing a release or returning company property.\n- **Payment method:** check, direct deposit (only with written employee consent), or other approved method, paid at the place of work or mailed.\n- **EDD notice:** Provide the Notice of Unemployment Insurance (DE 2320) and related forms at separation.\n\n**Penalty risk:** Late final pay triggers waiting-time penalties under \u00a7203 of one day's wages for each day late, up to 30 days, plus possible interest and fees.\n\nThis is general guidance. Confirm the specifics with your HR or legal team, especially for unusual pay arrangements.",
+ "usage": {
+  "input_tokens": 58,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1347,
+  "output_tokens_details": {
+   "thinking_tokens": 716
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

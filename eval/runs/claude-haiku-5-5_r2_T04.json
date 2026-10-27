@@ -1,0 +1,23 @@
+{
+ "task_id": "T04",
+ "run": 2,
+ "prompt": "An employee has a child support order (entered first) and a later IRS levy (Form 668-W). Disposable pay is $3,100 per period. Set the order and the amounts.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "**Order of priority**\n\n1. **Child support withholding first.** The support order was entered first, and child support withholding has priority over other garnishments and levies.\n2. **IRS levy second**, applied to what remains after child support, and limited by the exempt amount under IRS Publication 1494.\n\n**Amounts**\n\nDisposable earnings: **$3,100**\n\n1. **Child support (CCPA limit):**\n   - Assuming the employee supports no other spouse or child and has no support arrears over 12 weeks, the cap is 50% of disposable earnings: 0.50 \u00d7 $3,100 = **$1,550**.\n   - If the order sets a lower amount, withhold only that amount.\n   - If the employee supports another spouse or child, the cap is 60% ($1,860). If arrears exceed 12 weeks, add 5 percentage points (55% = $1,705, or 65% = $2,015).\n\n2. **Remaining after child support:** $3,100 \u2212 $1,550 = **$1,550**\n\n3. **IRS levy (668-W):**\n   - Levy amount = $1,550 \u2212 the Publication 1494 exempt amount for this employee.\n   - The exempt amount depends on pay frequency, filing status, and number of dependents, so I can't finalize the levy figure without them.\n   - Withhold the levy amount, but not more than $1,550, and never less than zero.\n\n**Before finalizing**\n\n- Confirm the pay frequency, the employee's W-4 filing status and dependents, and whether there are other support obligations or arrears.\n- Confirm the priority treatment and any state-specific rules with your payroll counsel or the issuing agencies. The interaction between a child support order and a federal tax levy can be fact-specific.\n- If you send me the pay frequency and filing status, I'll compute the exact Publication 1494 exempt amount and the final levy withholding.",
+ "usage": {
+  "input_tokens": 83,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 3316,
+  "output_tokens_details": {
+   "thinking_tokens": 2713
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

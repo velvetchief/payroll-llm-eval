@@ -1,0 +1,23 @@
+{
+ "task_id": "T02",
+ "run": 1,
+ "prompt": "An employee earns a $2,000 quarterly bonus. Recompute the overtime regular rate for the quarter.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "To recompute the regular rate, I need the quarter's total hours worked and overtime hours. Under the FLSA, a nondiscretionary bonus like this one must be included in the regular rate. Because the bonus covers the full quarter, it is spread across all hours worked in that quarter, not just the overtime hours.\n\n**Method**\n\n1. Add the bonus to total straight-time compensation for the quarter.\n2. Divide by total hours worked to get the regular rate.\n3. Calculate the additional overtime owed: 0.5 \u00d7 (bonus \u00f7 total hours) \u00d7 overtime hours. The half-time premium is used because the employee was already paid 1.5\u00d7 on the original regular rate for overtime hours.\n\n**Illustration with hypothetical figures**\n\nAssume:\n- Base rate: $20.00/hr\n- 13 weeks, 45 hours per week: 585 total hours, including 65 overtime hours (5 per week)\n- Straight-time earnings: 585 \u00d7 $20 = $11,700\n- Bonus: $2,000\n\nSteps:\n- Bonus per hour: $2,000 \u00f7 585 = $3.42\n- Revised regular rate: $20.00 + $3.42 = **$23.42/hr**\n- Additional overtime owed: 0.5 \u00d7 $3.42 \u00d7 65 = **$111.11**\n\nThe employee's overtime rate for the bonus adjustment is therefore $23.42 \u00d7 1.5 = $35.13/hr, and the extra $111.11 is paid as back overtime for the quarter.\n\nIf you send the employee's actual base rate, weekly hours, overtime hours, and pay periods, I can run the exact numbers. Also check whether the bonus is discretionary (excluded from the regular rate) or nondiscretionary (included), and whether any state rules apply, since some states are stricter than federal law.",
+ "usage": {
+  "input_tokens": 66,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1437,
+  "output_tokens_details": {
+   "thinking_tokens": 841
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

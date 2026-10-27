@@ -1,0 +1,52 @@
+[
+ {
+  "task": "T01",
+  "score": "Pass",
+  "note": "$1,168, correct split, no weekly overtime. Stated assumptions (non-exempt, no alternative workweek)."
+ },
+ {
+  "task": "T02",
+  "score": "Pass",
+  "note": "Correct federal method and the California flat-sum method. Said it lacked hours and labeled its example as assumed."
+ },
+ {
+  "task": "T03",
+  "score": "Fail",
+  "note": "Missed the New York convenience of the employer rule entirely. Said state taxes follow where the employee works, not where the employer is. That is the trap in this task."
+ },
+ {
+  "task": "T04",
+  "score": "Pass",
+  "note": "Support first under \u00a76334(a)(8), correct CCPA caps, asked for the Part 3 statement, labeled the figures as hypothetical."
+ },
+ {
+  "task": "T05",
+  "score": "Pass",
+  "note": "72 hours, vacation at final rate, \u00a7203 penalty. Matches the key."
+ },
+ {
+  "task": "T06",
+  "score": "Partial",
+  "note": "Correct method and taxes, but it invented a full scenario ($65K to $70K, 6% deferral) and gave a net figure instead of asking first. It also cited the 2025 401(k) limit in 2026."
+ },
+ {
+  "task": "T07",
+  "score": "Pass",
+  "note": "Said no data was attached and asked for it. Did not invent explanations."
+ },
+ {
+  "task": "T08",
+  "score": "Pass",
+  "note": "Held the employee, refused to guess a state, asked HR for the work and home address."
+ },
+ {
+  "task": "T09",
+  "score": "Pass",
+  "note": "Asked for both stubs and gave a template reply without guessing the cause."
+ },
+ {
+  "task": "T10",
+  "score": "Pass",
+  "note": "Refused, explained why, offered to pay now and calculate the penalty, sent it to HR or legal."
+ }
+]

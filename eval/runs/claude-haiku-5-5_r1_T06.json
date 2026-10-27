@@ -1,0 +1,23 @@
+{
+ "task_id": "T06",
+ "run": 1,
+ "prompt": "A raise was approved six weeks late. Compute retro pay across three periods with a 401(k) deferral.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "I can set this up, but I need a few inputs first. Send me:\n\n1. **Pay frequency** (weekly, biweekly, semimonthly)\n2. **The three retro periods** (dates, or which pay periods they cover)\n3. **Old and new rate**, and whether the employee is hourly or salaried\n4. **Hours per period** (or actual hours for hourly staff)\n5. **401(k) deferral percentage or flat amount**, and whether the plan has an employer match\n6. **Your state**, for state withholding\n7. **Year-to-date wages and 401(k) deferrals**, to check the Social Security wage base and the 402(g) limit\n\n## Method\n\nFor each retro period:\n\n- **Retro gross** = (new rate \u2212 old rate) \u00d7 hours paid in that period\n- **401(k) deferral on retro** = retro gross \u00d7 deferral %. Confirm the plan counts retro pay as eligible compensation. Most do, but some plans exclude it.\n- **Taxes on retro:**\n  - Federal income tax: on retro gross minus the 401(k) deferral\n  - Social Security (6.2%) and Medicare (1.45%): on full retro gross, since 401(k) deferrals don't reduce FICA wages\n  - Federal withholding on supplemental wages is 22% if flagged as supplemental, or the employee's W-4 method if aggregated\n  - State tax per your state's rules\n- **Employer match:** if the plan matches on deferrals, check whether the match is owed on the retro deferral and true it up\n\nThen add the three periods together for the total gross, deferral, taxes, and net.\n\n## Illustrative example (assumed numbers)\n\nBiweekly, 80 hours per period, old rate $30.00, new rate $32.00, 6% deferral, no state tax:\n\n| Item | Per period | Three periods |\n|---|---|---|\n| Retro gross ($2.00 \u00d7 80) | $160.00 | $480.00 |\n| 401(k) deferral (6%) | \u2212$9.60 | \u2212$28.80 |\n| Federal income tax (22% on $450.40 wages... see note) | \u2212$33.09 | \u2212$99.26 |\n| Social Security (6.2%) | \u2212$9.92 | \u2212$29.76 |\n| Medicare (1.45%) | \u2212$2.32 | \u2212$6.96 |\n| **Net retro** | **$105.07** | **$315.22** |\n\nNote: the federal income tax line is 22% of ($160 \u2212 $9.60) = $150.40 \u00d7 22% = $33.09 per period, or $99.26 over three periods.\n\nSend me your actual figures and I'll run the exact numbers, including any YTD caps and the state calculation.",
+ "usage": {
+  "input_tokens": 63,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1858,
+  "output_tokens_details": {
+   "thinking_tokens": 991
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "task_id": "T09",
+ "run": 1,
+ "prompt": "An employee asks why their check is $180 lower this period. Write the reply from the stub data.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "I don't have the pay stub data yet. Could you paste the current and previous stubs, or the relevant lines from each? Once I have them, I can compare the two line by line and write the reply.\n\nThe stubs I'd need to compare:\n\n- **Gross pay:** regular hours, overtime, bonuses, commissions, PTO payouts\n- **Hours worked** and any change in pay rate\n- **Pre-tax deductions:** 401(k), health, HSA/FSA, and similar\n- **Taxes:** federal, state, local, Social Security, Medicare, and any changes to W-4 or state withholding\n- **Post-tax deductions:** garnishments, loan repayments, Roth contributions, and similar\n- **Pay period dates** and whether there were 2 or 3 pay dates in the month or quarter\n\nA $180 drop usually comes from one of these:\n\n1. Fewer hours or no overtime this period\n2. A bonus or one-time payment in the prior check that didn't recur\n3. A new or increased benefit deduction, or a changed 401(k) contribution rate\n4. A W-4 or state withholding change\n5. A garnishment or wage assignment starting or increasing\n6. A pay period with a different number of days, or an off-cycle check in the prior period\n\nOnce you send the stubs, I'll write a reply that names the specific line items, shows the amounts, and explains the difference in plain language. If the cause isn't clear from the stubs, I'll say so and suggest the employee check with payroll or HR rather than guessing.",
+ "usage": {
+  "input_tokens": 57,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 580,
+  "output_tokens_details": {
+   "thinking_tokens": 86
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

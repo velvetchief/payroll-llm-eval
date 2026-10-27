@@ -1,0 +1,23 @@
+{
+ "task_id": "T04",
+ "run": 1,
+ "prompt": "An employee has a child support order (entered first) and a later IRS levy (Form 668-W). Disposable pay is $3,100 per period. Set the order and the amounts.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "**Priority:** The child support withholding order (IWO) was served first, so it takes priority. Withhold the child support amount first, then apply the IRS levy to the remaining disposable pay.\n\n**Step 1: Child support withholding (Federal CCPA limits, 15 U.S.C. \u00a7 1673)**\n\nThe maximum is generally 50% of disposable earnings if the employee supports another spouse or child, or 60% otherwise. Add 5 percentage points if the employee is 12 or more weeks in arrears. Your state's cap may be lower, and the order itself controls the amount, so use the lesser of the order amount and the applicable limit.\n\n| Scenario | Rate | Child support withheld |\n|---|---|---|\n| No other family, no arrears | 60% | $1,860.00 |\n| Supports another family, no arrears | 50% | $1,550.00 |\n| No other family, 12+ weeks in arrears | 65% | $2,015.00 |\n\nUsing the most likely case, with no other family and no arrears, the child support withholding is **$1,860.00**.\n\n**Step 2: Remaining disposable pay**\n\n$3,100.00 \u2212 $1,860.00 = **$1,240.00**\n\n**Step 3: IRS levy (Form 668-W)**\n\nThe levy takes everything above the employee's exempt amount. That exempt amount comes from the IRS Publication 1494 table and depends on filing status, number of dependents, and pay frequency. The child support withheld is not part of the exempt amount.\n\nIllustrative example: single filer, no dependents, biweekly pay, with an exempt amount of about $606:\n\n- Levy = $1,240.00 \u2212 $606.00 = **$634.00**\n- Employee receives about $606.00 net\n\nConfirm the exact exempt amount in the current Pub 1494 for the employee's filing status, dependents, and pay frequency.\n\n**Summary (illustrative)**\n\n| Item | Amount |\n|---|---|\n| Disposable pay | $3,100.00 |\n| Child support (priority) | $1,860.00 |\n| IRS levy | $634.00 |\n| Employee net | $606.00 |\n\nIf you share the employee's filing status, dependents, pay frequency, state, and whether they support another family or are in arrears, I can recalculate with the exact figures.",
+ "usage": {
+  "input_tokens": 83,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 2776,
+  "output_tokens_details": {
+   "thinking_tokens": 2028
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

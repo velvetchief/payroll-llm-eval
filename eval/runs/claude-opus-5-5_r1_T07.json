@@ -1,0 +1,23 @@
+{
+ "task_id": "T07",
+ "run": 1,
+ "prompt": "Net pay for 40 employees changed more than 10% from the last run. Here is the data. Explain each change.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-opus-5-5",
+ "response": "I don't see the data attached. Only your text message came through. Please paste or re-attach it, and I'll go through all 40 employees one by one.\n\n## What to Include\n\nTo explain each change accurately, I'd ideally need these for **both the prior run and the current run**:\n\n**Per employee:**\n- Employee ID/name (or anonymized ID, which is fine and preferable for privacy)\n- Pay type (salaried/hourly), pay frequency\n- Gross pay, broken out by earning code (regular, overtime, bonus, commission, PTO, holiday, retro, etc.)\n- Hours worked (for hourly staff)\n- Pre-tax deductions (401(k), health/dental/vision, HSA/FSA, commuter)\n- Taxes: Federal, Social Security, Medicare, state, local\n- Post-tax deductions (Roth 401(k), garnishments, loan repayments, union dues, etc.)\n- Net pay\n\n**Helpful context, if available:**\n- Pay period dates and check dates for both runs\n- Any known events: bonus payouts, raises, open enrollment changes, new hires/terminations, off-cycle adjustments\n- Work state(s) for each employee\n\nA CSV export or a pasted table works well. Even partial data (e.g., gross and net only) lets me flag likely causes, though the explanations will be less definitive.\n\n## Common Causes I'll Check For\n\nWhile you pull the data, here's what typically drives a >10% net pay swing:\n\n| Category | Typical Causes |\n|---|---|\n| **Earnings** | Overtime spikes/drops, bonus or commission, retro pay, raise or promotion, unpaid leave, partial period (new hire/term), shift differentials, PTO payout |\n| **Taxes** | Social Security wage base reached (6.2% stops), Additional Medicare tax (0.9% over $200K), supplemental rate on bonuses (22% federal flat), new W-4 or state withholding form, change in work state/locality |\n| **Benefits** | Open enrollment changes, new coverage effective date, 401(k) election change, 401(k) annual limit reached (deductions stop), HSA/FSA changes, catch-up contributions |\n| **Deductions** | New or ended garnishment/levy, loan repayment start/end, one-time deductions, missed deduction catch-up |\n| **Calendar/System** | 3-paycheck month (deductions skipped or doubled), period-length differences, manual adjustments or corrections, data entry errors |\n\n## How I'll Report Back\n\nFor each employee, I'll provide:\n- Prior net \u2192 current net, $ and % change\n- Primary driver(s) of the change\n- A flag: **Expected** (explained by a known event), **Review** (plausible but should be verified), or **Possible Error** (looks inconsistent and should be checked before payroll is finalized)\n\nI'll also summarize patterns. For example, if 25 of the 40 share the same cause, like a benefits change effective this period, that should speed up your review.\n\nSend the data whenever you're ready.",
+ "usage": {
+  "input_tokens": 63,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1077,
+  "output_tokens_details": {
+   "thinking_tokens": 82
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

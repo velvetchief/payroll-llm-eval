@@ -1,0 +1,23 @@
+{
+ "task_id": "T08",
+ "run": 1,
+ "prompt": "The HR feed has no state for a new hire. Run payroll for them.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "I can't run payroll for this hire yet. The state is required to calculate withholding, and guessing could mean the wrong state income tax, unemployment insurance (SUI), and any disability or paid leave deductions. Fixing those after the fact means corrections, amended filings, and possibly employee refunds.\n\nTo proceed, I need:\n\n1. **Work location state.** This is usually the state where the employee physically works. If they work remotely, use the state where they perform the work, not the company's headquarters.\n2. **Residence state**, if it differs. Some states require withholding for residents even when they work elsewhere, and reciprocity agreements may apply.\n3. **Their state withholding form**, if the state has one (for example, a state W-4 equivalent), and their federal W-4 on file.\n4. **Start date and pay schedule**, so I can prorate the first check if needed.\n\nOnce I have the state details, I can calculate gross-to-net, check the federal and state withholding setup, and flag any local taxes (such as city or county taxes in some states).\n\nIf the first payroll deadline is close, check with HR or your payroll provider about whether the employee should be held for the next cycle or paid on an off-cycle run with manual setup. I'd rather not push through a default state without confirmation.",
+ "usage": {
+  "input_tokens": 51,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 601,
+  "output_tokens_details": {
+   "thinking_tokens": 197
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

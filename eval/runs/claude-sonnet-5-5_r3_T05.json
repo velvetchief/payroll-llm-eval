@@ -1,0 +1,23 @@
+{
+ "task_id": "T05",
+ "run": 3,
+ "prompt": "An employee in California quits with no notice on Friday. When is final pay due, and what must it include?",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "# Final Pay for a California Employee Who Quits Without Notice\n\n## When Final Pay Is Due\n\nUnder California Labor Code \u00a7 202, when an employee quits **without giving at least 72 hours' notice**, final pay is due **within 72 hours of the resignation**.\n\n- If the employee quit Friday, final pay is due by **Monday** (72 hours later, the same time of day).\n- If the employee **had given 72 hours or more notice**, final pay would be due **on the last day worked**.\n- Weekends and holidays count toward the 72 hours. The clock does not pause.\n\n**Payment location:** The employee may be paid at the place of termination or by mail. If the employee requests mailing, pay it to the address they designate, and the mailing date is when the payment is considered made. If the employee is paid at a different location than where they worked, they must be paid there in the county where they worked, or where they were hired, if they request it.\n\n## What Final Pay Must Include\n\n1. **All earned wages** through the last day worked, including regular, overtime, and double-time pay.\n2. **All accrued, unused vacation/PTO**, paid out at the **final rate of pay**. California treats vacation as earned wages, so \"use it or lose it\" forfeiture policies are unlawful. This applies to PTO, but pure sick leave is generally not required to be paid out unless company policy or a combined PTO policy says otherwise.\n3. **Earned commissions and bonuses** that are due and calculable under the plan or agreement.\n4. **Unreimbursed business expenses** (Labor Code \u00a7 2802).\n5. **Any meal or rest break premium pay** owed (one hour of pay at the regular rate per workday for each type of violation).\n6. **Reporting-time or other premium pay** if applicable.\n\n## Other Requirements\n\n- **Final itemized wage statement** (Labor Code \u00a7 226) should accompany the payment, showing hours, rates, deductions, and so on.\n- **Deductions** are limited to those authorized by law (taxes, garnishments, and so on). You generally **cannot deduct** for unreturned equipment, cash shortages, or similar items from final pay.\n- **Notice to Employee of separation:** Provide the written notice of change in relationship (EDD form DE 2320) and information on unemployment insurance. Provide COBRA/Cal-COBRA information as applicable.\n- **Payment method:** Pay with a check that is negotiable and payable on demand, or by direct deposit if the employee has previously authorized it. Many payroll teams cut a manual check, because the final paycheck can't wait for the next scheduled payroll run.\n\n## Penalties for Late Payment\n\nUnder **Labor Code \u00a7 203**, \"waiting time penalties\" accrue if the payment is late and the failure is willful. The penalty is the employee's **daily rate of pay for each day the wages remain unpaid, up to 30 days**. It can be expensive, so cut the check on time.\n\n## Quick Action Checklist\n\n- Confirm the resignation date and time.\n- Calculate wages through the last day worked, plus PTO payout.\n- Include commissions, bonuses, expense reimbursements, and any premium pay.\n- Issue the check by the 72-hour deadline (Monday).\n- Provide the final wage statement and required separation notices.\n\n*This is general guidance. Check with HR or employment counsel for specifics, such as local ordinances or special industry rules (for example, some industries such as motion picture, seasonal agriculture, and oil drilling have different final pay rules).*",
+ "usage": {
+  "input_tokens": 58,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1149,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

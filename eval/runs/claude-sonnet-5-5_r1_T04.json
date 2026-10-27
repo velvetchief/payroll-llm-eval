@@ -1,0 +1,23 @@
+{
+ "task_id": "T04",
+ "run": 1,
+ "prompt": "An employee has a child support order (entered first) and a later IRS levy (Form 668-W). Disposable pay is $3,100 per period. Set the order and the amounts.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "**Order of withholding**\n\n1. **Child support first.** The order was entered and served before the levy, so it has priority (IRC \u00a76334(a)(8)). The IRS levy takes what remains above its exempt amount.\n2. **IRS levy (Form 668-W) second.** A continuous wage levy has priority over later garnishments, but not over a prior support order.\n\n**Calculation (disposable pay = $3,100)**\n\n1. **Child support** = the lesser of:\n   - the ordered amount per period (including any arrears add-on in the order), or\n   - the CCPA cap on disposable pay: 50% ($1,550) if supporting another spouse or child, or 60% ($1,860) if not. Add 5 points (55% = $1,705, or 65% = $2,015) if arrears are more than 12 weeks old.\n2. **Remaining pay** = $3,100 \u2212 child support withheld.\n3. **Levy exempt amount** = the figure from IRS Pub. 1494 for the pay period, based on the filing status and exemptions on the employee's Form 668-W Part 4 statement. If the employee didn't return it, use married filing separately with one exemption.\n4. **Levy amount** = remaining pay \u2212 exempt amount, and never less than $0.\n\n**Illustration only.** The order amount and Pub. 1494 exemption weren't provided, so these figures are placeholders:\n\n| Item | Amount |\n|---|---|\n| Disposable pay | $3,100.00 |\n| Child support (assume order is $900) | \u2212$900.00 |\n| Remaining | $2,200.00 |\n| Levy exempt amount (assume $1,200) | \u2212$1,200.00 |\n| **Levy withholding** | **$1,000.00** |\n| Employee net of both | $1,200.00 |\n\n**To finalize, I need:**\n- the child support amount per period and any arrears, plus whether the employee supports another family\n- the pay frequency\n- the Form 668-W Part 4 statement (filing status and exemptions), to look up the exact exempt amount in Pub. 1494\n\nIf the order is large enough that the remaining pay is at or below the exempt amount, the levy is $0 for that period. Remit the levy to the IRS, remit support per the order, and keep the levy in place until the IRS releases it (Form 668-D).",
+ "usage": {
+  "input_tokens": 83,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 2229,
+  "output_tokens_details": {
+   "thinking_tokens": 1478
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

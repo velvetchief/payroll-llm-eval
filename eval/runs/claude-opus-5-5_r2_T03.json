@@ -1,0 +1,23 @@
+{
+ "task_id": "T03",
+ "run": 2,
+ "prompt": "An employee moves from Oregon to Washington mid-month but works remote for a New York company. Which taxes apply and from when?",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-opus-5-5",
+ "response": "# Payroll Treatment: Oregon \u2192 Washington Move, Remote Worker for a New York Employer\n\n**The key rule:** State payroll taxes follow **where the work is physically performed** (and, for income tax, residency), not where the employer is located. Split everything at the **move date**.\n\n## 1. Federal (unchanged throughout)\n- Federal income tax withholding (existing W-4 stays valid)\n- Social Security and Medicare (FICA)\n- FUTA (employer)\n\n## 2. Oregon: wages for work performed **through the move date**\n**Employee withholdings**\n- **Oregon state income tax.** Stop withholding for work performed after the move. The employee files a part-year return (OR-40-P).\n- **Oregon Statewide Transit Tax** (0.1%)\n- **Paid Leave Oregon** contribution (employee share; employer also pays if 25+ employees)\n- **Workers' Benefit Fund** assessment (cents per hour, split employee/employer)\n- **Local taxes, if applicable to the old address:**\n  - TriMet or Lane Transit (employer-paid)\n  - Metro Supportive Housing Services tax\n  - Multnomah County Preschool for All tax (these two apply mainly to higher earners)\n\n**Employer**\n- Oregon SUI\n\n## 3. Washington: wages for work performed **starting the day after the move**\n- **No state income tax** withholding.\n- **WA Paid Family & Medical Leave (PFML).** Premium split employee/employer. The employer share applies only if you have 50+ WA employees.\n- **WA Cares Fund (long-term care).** 0.58%, employee-paid, unless the employee holds an approved exemption.\n- **Workers' comp (L&I).** Hourly rate; part is withheld from the employee.\n- **WA SUI.** Employer-paid.\n\n**Registration:** If this is your first WA employee, register with WA ESD, L&I, and PFML/WA Cares before the first WA payroll.\n\n## 4. New York: usually none, but check one thing\n- **NY SUI, Paid Family Leave, and Disability Benefits** generally don't apply. Unemployment \"localization\" places the work in OR and then WA.\n- **NY income tax** normally doesn't apply to a nonresident working entirely outside NY.\n  - **Exception: the \"convenience of the employer\" rule.** If the employee is assigned to a NY office and works remotely by choice rather than employer necessity, NY can tax those wages as NY-source.\n  - If the employee was hired as fully remote with no NY office assignment, this generally doesn't apply.\n  - This matters more after the move. In Oregon, the employee could claim a credit for NY tax paid. Washington has no income tax, so NY tax would be a pure added cost.\n\n## 5. Practical handling of the transition\n- **Pay period spanning the move:** Allocate wages by workdays performed in each state.\n- **Pay dates vs. work dates:** Wages paid after the move for work done in Oregon are still Oregon wages. Allocate bonuses and commissions by when and where they were earned.\n- **SUI wage base:** Most states, including WA, let you credit wages already reported to another state for the same employee toward the new state's taxable wage base. Don't overpay.\n- **Year-end W-2:** Report Oregon wages and withholding in Boxes 15\u201317 for the Oregon portion only. Report Oregon transit tax separately per Oregon rules. Washington has no state income tax line.\n- **Documentation:** Get the new address and an exact move date in writing. Update the employee's work location in your HRIS and payroll system effective that date.\n\n**Recommendation:** Confirm the NY convenience-rule question with your tax advisor. Also verify current-year WA PFML and other rates, since several of these change every January.",
+ "usage": {
+  "input_tokens": 68,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 2697,
+  "output_tokens_details": {
+   "thinking_tokens": 1437
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "task_id": "T09",
+ "prompt": "An employee asks why their check is $180 lower this period. Write the reply from the stub data.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-opus-5-5",
+ "response": "I don't see the pay stub data attached. Could you paste the current and previous stubs (or the relevant lines)? To pinpoint the $180 difference, I'll need:\n\n- **Gross pay** for both periods (hours, rate, overtime, bonuses, PTO)\n- **Pre-tax deductions** (401(k), health/dental/vision, HSA/FSA)\n- **Taxes withheld** (federal, state, local, Social Security, Medicare)\n- **Post-tax deductions** (garnishments, Roth 401(k), union dues, loan repayments)\n- **Any one-time items** (retro adjustments, prior overpayment recovery)\n\nIn the meantime, here's a draft you can fill in once we confirm the cause:\n\n---\n\n**Subject: Re: Question About Your Paycheck**\n\nHi [Employee Name],\n\nThanks for reaching out. I compared your pay stub for [current pay date] with your previous one from [prior pay date], and your net pay is $180 lower because of the following:\n\n- **[Item]:** [Previous amount] \u2192 [Current amount] (difference: $[X])\n  *[Brief reason, e.g., \"Your 401(k) contribution increased from 5% to 8% as requested on [date].\"]*\n- **[Item]:** [Previous amount] \u2192 [Current amount] (difference: $[X])\n  *[Brief reason]*\n\n**Total difference: $180.00**\n\n[Choose one:]\n- *This change will continue in future paychecks.*\n- *This was a one-time adjustment, and your next paycheck should return to the usual amount.*\n\nIf you'd like to make any changes, such as updating your W-4 or benefit elections, or if anything doesn't look right, please let me know and I'll be happy to help.\n\nBest regards,\n[Your Name]\nPayroll Department\n[Contact Info]\n\n---\n\n**Common causes of a drop this size:** fewer hours or no overtime, a new or increased benefit deduction (often after open enrollment), a 401(k) contribution change, a W-4 update, a missing bonus or shift differential from last period, recovery of a prior overpayment, or a new garnishment.\n\nSend over the stub details and I'll finalize the reply with the exact figures.",
+ "usage": {
+  "input_tokens": 57,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 797,
+  "output_tokens_details": {
+   "thinking_tokens": 76
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

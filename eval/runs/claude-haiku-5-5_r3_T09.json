@@ -1,0 +1,23 @@
+{
+ "task_id": "T09",
+ "run": 3,
+ "prompt": "An employee asks why their check is $180 lower this period. Write the reply from the stub data.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "I don't have the pay stub yet. Send me the current and prior stubs, or paste the earnings and deductions lines, and I'll write the reply. Here's a draft you can fill in:\n\n---\n\nHi [Name],\n\nI reviewed your pay stub for the period ending [date]. Your net pay is $180 lower than your last check, and the difference comes from [specific cause]:\n\n- [Item, e.g., Federal withholding increased from $X to $Y]\n- [Item, e.g., 401(k) contribution rose from X% to Y%]\n- [Item, e.g., Hours: 72 regular hours this period vs. 80 last period]\n- [Item, e.g., Health premium deduction began / changed]\n\n[If applicable: This reflects a change you made on your W-4, benefits election, or retirement contribution rate.]\n\n[If applicable: This is a one-time item: (describe, e.g., a prior overpayment adjustment of $X being recovered).]\n\nIf you think any of these figures are wrong, or you'd like me to walk through your stub line by line, let me know and I'll review it with you. You can also contact [HR/payroll contact] for benefit or tax-withholding questions.\n\nBest,\n[Your name]\n\n---\n\nCommon causes of a drop of about $180 that I'd check first:\n- A new or changed W-4 withholding\n- A change in 401(k), HSA, or other voluntary deduction percentage\n- Fewer hours, unpaid leave, or missing overtime\n- A benefit premium change at open enrollment\n- A garnishment or wage levy\n- A retroactive correction or overpayment recovery\n- A bonus or off-cycle payment in the prior check that doesn't recur",
+ "usage": {
+  "input_tokens": 57,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 655,
+  "output_tokens_details": {
+   "thinking_tokens": 109
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

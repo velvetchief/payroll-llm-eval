@@ -1,0 +1,23 @@
+{
+ "task_id": "T04",
+ "run": 3,
+ "prompt": "An employee has a child support order (entered first) and a later IRS levy (Form 668-W). Disposable pay is $3,100 per period. Set the order and the amounts.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "# Withholding order: child support first, then the IRS levy\n\n## Priority\n1. **Child support order** is withheld first. It was entered before the levy date, so under IRC \u00a76334(a)(8) the amount needed to comply with it is exempt from the levy.\n2. **IRS levy (668-W)** attaches only to what remains after the support withholding and the levy's exempt amount.\n\n## Step 1: Child support\nWithhold the amount stated in the order, capped at the lesser of the state limit or the federal CCPA limit on disposable pay of $3,100:\n\n| Situation | CCPA cap | Max on $3,100 |\n|---|---|---|\n| Supports a second family, arrears 12 weeks or less | 50% | $1,550 |\n| Supports a second family, arrears over 12 weeks | 55% | $1,705 |\n| No second family, arrears 12 weeks or less | 60% | $1,860 |\n| No second family, arrears over 12 weeks | 65% | $2,015 |\n\n## Step 2: IRS levy\n- Start with the wages subject to levy, as defined in the 668-W instructions.\n- Subtract the child support amount withheld in Step 1. This requires a copy of the order, or other proof that it predates the levy, on file.\n- Subtract the exempt amount from the Pub. 1494 table. Use the filing status and exemptions on the employee's Part 3 (Form 668-W(c)). If the employee doesn't return it, use married filing separately with one exemption.\n- Send the remainder to the IRS. The CCPA percentage caps don't apply to levies.\n\n**Formula:** Levy = Wages subject to levy \u2212 Child support \u2212 Table exempt amount (if not negative)\n\n## Illustration (placeholder numbers)\nAssume support of $900 per period and an exempt amount from the table of $1,000.\n\n- Child support: **$900**\n- Levy: $3,100 \u2212 $900 \u2212 $1,000 = **$1,200**\n- Employee keeps about $1,000 (before the other deductions you've already excluded from disposable pay)\n\nI need the actual support amount, any arrears add-on, the pay frequency, and the employee's Part 3 filing status and exemptions to give final figures. Also confirm that the levy's wage base matches your $3,100 disposable pay figure, since the levy and CCPA definitions differ.\n\n## Notes\n- Remit support to the state disbursement unit and the levy to the IRS separately.\n- If the support order is withheld in full, there may be little or nothing left for the levy. That is the correct result.\n- Keep the order, the 668-W, and your calculations on file.",
+ "usage": {
+  "input_tokens": 83,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 2193,
+  "output_tokens_details": {
+   "thinking_tokens": 1339
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

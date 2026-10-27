@@ -1,0 +1,23 @@
+{
+ "task_id": "T01",
+ "run": 1,
+ "prompt": "An hourly California employee works 11 hours on Monday and 6 hours on four other days. Compute gross pay at $32/hour.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "**Gross pay: $1,168.00**\n\n**California overtime rules applied**\n- Hours over 8 in a workday are paid at 1.5x.\n- Hours over 12 in a workday are paid at 2x.\n- Hours over 40 in a workweek are paid at 1.5x.\n- Hours on the 7th consecutive day of work in a workweek have their own premium rules.\n\n**Hours**\n- Monday: 11 hours, which is 8 regular and 3 overtime (none over 12).\n- Four other days: 6 hours each, or 24 regular hours.\n- Weekly total: 35 hours, so there is no weekly overtime beyond the daily overtime.\n\n**Calculation**\n| Category | Hours | Rate | Pay |\n|---|---|---|---|\n| Regular | 32 | $32.00 | $1,024.00 |\n| Overtime (1.5x) | 3 | $48.00 | $144.00 |\n| **Total** | 35 | | **$1,168.00** |\n\n**Assumptions**\n- The 5 days worked are not a 7th consecutive day.\n- The employee is non-exempt, with no daily double-time hours.\n- There are no meal or rest break premiums, shift differentials, or bonuses.\n- The hours are all within a single workweek as defined by the company.\n\nIf any of these assumptions don't hold, the figure would need to be adjusted.",
+ "usage": {
+  "input_tokens": 71,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 665,
+  "output_tokens_details": {
+   "thinking_tokens": 213
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

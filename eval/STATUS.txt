@@ -1,0 +1,2 @@
+Eval ran on Mon Oct 12 09:38:50 PDT 2026 with claude-opus-5-5. See T*.json and scores.json.
+3x3 rerun on Mon Oct 12 2026 ~10:45 PDT: claude-opus-5-5, claude-sonnet-5-5, claude-haiku-5-5, 3 runs each, max_tokens 8000. Raw outputs in runs/, grades in scores_3x3.json. Script: run3.py.

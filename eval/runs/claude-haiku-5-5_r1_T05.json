@@ -1,0 +1,23 @@
+{
+ "task_id": "T05",
+ "run": 1,
+ "prompt": "An employee in California quits with no notice on Friday. When is final pay due, and what must it include?",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "**Deadline:** When an employee quits **without giving 72 hours' notice**, final wages are due **within 72 hours** of the quit (Cal. Labor Code \u00a7 202). If the employee gave at least 72 hours' notice, final pay is due **at the time of quitting**. Since this employee quit with no notice, the 72-hour clock applies. If the employer's accounting or payroll office is closed when payment is due, payment is generally due the next business day the office is open.\n\n**What the final paycheck must include:**\n\n- **All earned, unpaid wages** through the separation date, including regular hours, overtime, and any applicable double time.\n- **Minimum wage compliance** for every hour worked.\n- **Commissions and bonuses** that were earned and vested under the plan terms.\n- **Meal and rest period premiums** owed for missed or noncompliant breaks (\u00a7 226.7).\n- **Accrued, unused vacation or PTO**, which must be paid out in California. Use-it-or-lose-it policies and forfeiture are not allowed for vacation (\u00a7 227.3).\n- **Only lawful deductions.** Deductions must be authorized by law or by a written authorization that meets legal requirements (\u00a7\u00a7 221, 224).\n\n**What is generally not required:** Accrued sick leave does not have to be paid out at separation under California law. If the employee is rehired within 12 months, previously accrued sick leave must be reinstated (\u00a7 246).\n\n**Penalties for late or missed final pay:** If the employer willfully fails to pay on time, waiting time penalties can apply: the employee's daily wage for each day of delay, up to 30 days (\u00a7 203). Penalties can be significant, so prompt payment matters.\n\n**Other practical points:**\n- Final pay can be delivered by mail if the employee requests it, but timing rules still apply.\n- Provide an itemized wage statement under \u00a7 226 that shows gross and net pay, hours, rates, and deductions.\n\nThis is general guidance, not legal advice. For questions about specific pay components or a potential dispute, check with employment counsel or the California Labor Commissioner's Office (DLSE).",
+ "usage": {
+  "input_tokens": 58,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1447,
+  "output_tokens_details": {
+   "thinking_tokens": 756
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

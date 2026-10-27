@@ -1,0 +1,23 @@
+{
+ "task_id": "T03",
+ "run": 3,
+ "prompt": "An employee moves from Oregon to Washington mid-month but works remote for a New York company. Which taxes apply and from when?",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "## Summary\n\n| Tax / Program | Before move (Oregon period) | After move (Washington period) |\n|---|---|---|\n| Federal income tax & FICA | Unchanged | Unchanged |\n| Oregon income tax | Withhold (resident, or OR-source wages) | Stop after move date |\n| Oregon Statewide Transit Tax (0.1%) | Withhold on OR-performed work | Stop |\n| Oregon Paid Leave (employee share) | Withhold | Stop |\n| Oregon SUI | Report/pay (if localized in OR) | Stop |\n| Washington income tax | None (no state income tax) | None |\n| Washington Cares (LTC, 0.58%) | N/A | Withhold (WA resident) |\n| Washington PFML premiums | N/A | Withhold/pay (employee share) |\n| Washington SUI and L&I workers' comp | N/A | Report/pay from move date |\n| New York income tax (nonresident) | Possibly, see below | Possibly, see below |\n\n## Oregon (through the move date)\n\n- The employee is a part-year Oregon resident for the year. Oregon taxes income earned while a resident and Oregon-source income after that.\n- Withhold Oregon income tax, the Statewide Transit Tax, and Paid Leave Oregon contributions on wages for work performed in Oregon before the move.\n- Oregon SUI applies while the employee's services are localized in Oregon.\n- Some Oregon localities levy their own taxes on residents (for example, Metro SHS and Multnomah County's Preschool for All in the Portland area). Check whether the employee lived in one of those jurisdictions.\n\n## Washington (from the move date)\n\n- Washington has no state income tax, so no Washington income tax withholding applies.\n- Washington Cares Fund: 0.58% employee-paid long-term care premium on wages up to the Social Security wage base, applying to Washington residents. Employees with an approved private LTC policy may be exempt.\n- Paid Family & Medical Leave: Washington premiums apply based on work in Washington.\n- Unemployment insurance: Washington SUI applies because the work is localized in Washington once the employee relocates.\n- L&I workers' comp: Washington's hours-based premiums generally apply to work performed in Washington.\n\n## New York (the complication)\n\nNew York taxes nonresidents on NY-source wages. Under New York's **convenience of the employer** rule, remote days worked outside NY count as NY-source unless the employee works from out of state because the employer requires it (employer necessity).\n\n- If the convenience rule applies, NY can tax the employee's wages for days worked from Washington, even though Washington has no income tax to provide an offsetting credit. This can result in tax with no credit elsewhere.\n- If the employee works remotely by choice, expect NY nonresident withholding and a NY IT-203 filing.\n- If the employer can document that remote work from Washington is a bona fide necessity, those days are generally not NY-source.\n- No reciprocity agreement exists between NY and either Oregon or Washington.\n\n## Practical steps for payroll\n\n1. **Split the mid-month pay:** Allocate wages by work location and date. Pay before the move date is Oregon-sourced; after is Washington-sourced.\n2. **Update the employee's address and work location** in your system, and get a documented move date.\n3. **Stop Oregon withholding and reporting** after the move date. File a final Oregon quarterly report for the period.\n4. **Register for Washington employer accounts** (ESD for SUI, L&I, PFML, and Cares as needed) before the first Washington payroll.\n5. **Decide on NY withholding:** Confirm with your tax advisor whether NY's convenience rule applies, and document the employer-necessity determination.\n6. **Year-end reporting:** Issue W-2s with the correct state allocations (Oregon part-year, New York nonresident if applicable, and Washington with no income tax).\n7. **Notify the employee** of the tax consequences, especially the possible NY tax with no offsetting credit.\n\nThis is general guidance. Rules vary by locality and change over time, so confirm the NY convenience rule treatment and any Oregon local taxes with a state tax professional or your payroll provider before processing.",
+ "usage": {
+  "input_tokens": 68,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 3571,
+  "output_tokens_details": {
+   "thinking_tokens": 2163
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

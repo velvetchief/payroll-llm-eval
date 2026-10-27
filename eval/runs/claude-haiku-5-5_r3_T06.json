@@ -1,0 +1,23 @@
+{
+ "task_id": "T06",
+ "run": 3,
+ "prompt": "A raise was approved six weeks late. Compute retro pay across three periods with a 401(k) deferral.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "I can run this once I have the actual figures. Here's what I need:\n\n1. **Old and new pay rates** (annual salary, or hourly rate and average hours)\n2. **Pay frequency** (weekly, biweekly, semimonthly, or monthly) and the pay dates for the three affected periods\n3. **401(k) deferral**: percentage or flat dollar amount, and whether the plan has a match that applies to retro pay\n4. **Employee's state** and any other deductions that apply to gross pay\n\n**Method**\n\nFor each affected period:\n- Retro gross = (new per-period pay \u2212 old per-period pay)\n- 401(k) deferral = retro gross \u00d7 deferral %\n- Taxes: FICA (Social Security 6.2%, Medicare 1.45%) applies to the full retro gross, since 401(k) deferrals are subject to FICA. Federal income tax applies to retro gross minus the deferral, typically at the 22% flat supplemental rate or via the aggregate method.\n- Net = retro gross \u2212 deferral \u2212 taxes \u2212 other deductions\n\n**Illustrative example** (assumed numbers, not your case)\n\n- Old salary: $60,000; new salary: $63,000; biweekly (26 periods)\n- Per-period difference: $2,423.08 \u2212 $2,307.69 = $115.38\n- Three periods: retro gross = $346.15\n- 401(k) at 5%: $17.31 deferred\n- Social Security (6.2% of $346.15): $21.46\n- Medicare (1.45%): $5.02\n- Federal withholding at 22% on $328.84 (gross less deferral): $72.35\n- Net retro pay: about $230.01, before any state tax\n\nBefore running the final numbers, confirm with your plan documents whether retro pay counts as eligible compensation for the 401(k) match, and whether your payroll system treats it as a lump-sum supplemental payment or adjusts prior periods. Send me your figures and I'll compute the exact amounts for each period.",
+ "usage": {
+  "input_tokens": 63,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1672,
+  "output_tokens_details": {
+   "thinking_tokens": 1026
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

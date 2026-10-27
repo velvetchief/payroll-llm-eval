@@ -1,0 +1,23 @@
+{
+ "task_id": "T06",
+ "run": 3,
+ "prompt": "A raise was approved six weeks late. Compute retro pay across three periods with a 401(k) deferral.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "You didn't include the figures, so here is the method, a worked example with placeholder numbers, and the inputs I need to run your actual case.\n\n## Inputs needed\n- Pay frequency (six weeks late is likely 3 biweekly periods, or 3 of 6 weekly periods)\n- Old and new rate (salary or hourly)\n- Effective date and the pay periods affected\n- Exempt or non-exempt (non-exempt means overtime and shift differentials must be recalculated at the new rate)\n- 401(k) election (% or flat $, pre-tax or Roth) and employer match formula\n- YTD 401(k) deferrals (402(g) limit check) and whether the plan's definition of compensation includes retro pay\n- State of residence (supplemental withholding rules vary)\n\n## Method\n1. **Per-period difference:** new gross \u2212 old gross for each affected period. For hourly employees, use (new rate \u2212 old rate) \u00d7 hours paid, plus overtime at (new rate \u2212 old rate) \u00d7 1.5 \u00d7 OT hours.\n2. **Sum the periods** to get total retro gross.\n3. **401(k) deferral:** apply the employee's election % to the retro, if the plan counts retro pay as eligible compensation. Check the annual limit.\n4. **FICA:** Social Security and Medicare apply to the full retro amount. 401(k) deferrals do not reduce FICA wages.\n5. **Federal income tax:** retro is supplemental wages. Either withhold at the flat 22% on the taxable amount (after the pre-tax deferral) if the retro is paid separately, or aggregate it with regular wages.\n6. **State and local tax:** follow state supplemental rules.\n7. **Employer match:** compute it on the retro if the plan matches on all eligible compensation, and true-up if needed.\n\n## Worked example (hypothetical)\nBiweekly, salary rises from $70,000 to $75,000, 3 periods late, 6% pre-tax 401(k), 22% flat federal rate.\n\n| Item | Amount |\n|---|---|\n| Old biweekly gross ($70,000 / 26) | $2,692.31 |\n| New biweekly gross ($75,000 / 26) | $2,884.62 |\n| Difference per period | $192.31 |\n| **Total retro gross (\u00d73)** | **$576.92** |\n| 401(k) at 6% | \u2212$34.62 |\n| Social Security + Medicare (7.65% \u00d7 $576.92) | \u2212$44.13 |\n| Federal withholding (22% \u00d7 $542.30) | \u2212$119.31 |\n| State tax | per state rules |\n| **Net retro (before state)** | **\u2248 $378.86** |\n\nIf the match is 50% of the first 6%, the employer match on the retro is about $17.31.\n\n## Other checks\n- **Next paycheck:** the new rate takes effect going forward, so don't double-count it.\n- **Year-end crossover:** if the retro falls in a new tax year, the wages are taxed in the year paid, but check the plan's compensation rules.\n- **Documentation:** show the retro as a separate earnings code (e.g., \"Retro Pay\") with the periods covered, so the employee can reconcile it.\n\nSend me the actual numbers and I'll calculate the exact amounts.",
+ "usage": {
+  "input_tokens": 63,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1663,
+  "output_tokens_details": {
+   "thinking_tokens": 599
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

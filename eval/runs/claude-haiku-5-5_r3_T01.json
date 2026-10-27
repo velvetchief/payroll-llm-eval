@@ -1,0 +1,23 @@
+{
+ "task_id": "T01",
+ "run": 3,
+ "prompt": "An hourly California employee works 11 hours on Monday and 6 hours on four other days. Compute gross pay at $32/hour.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "**Gross pay: $1,168.00**\n\n**Hours breakdown**\n- Monday: 11 hours\n- Four other days: 6 \u00d7 4 = 24 hours\n- Total: 35 hours\n\n**California overtime rules**\n- Daily overtime applies to hours over 8 in a workday, at 1.5\u00d7. Hours over 12 in a workday are double time.\n- Weekly overtime applies to hours over 40 in a workweek, at 1.5\u00d7.\n- Overtime is not pyramided, so an hour counted as daily overtime is not counted again toward weekly overtime.\n\n**Calculation**\n- Monday: 8 regular hours + 3 hours daily overtime (no double-time hours, since 11 is under 12)\n- Other days: 24 regular hours (none exceed 8 in a day)\n- Weekly total is 35 hours, under the 40-hour threshold, so no additional weekly overtime applies.\n\n| Category | Hours | Rate | Amount |\n|---|---|---|---|\n| Regular | 32 | $32.00 | $1,024.00 |\n| Overtime (1.5\u00d7) | 3 | $48.00 | $144.00 |\n| **Gross pay** | **35** | | **$1,168.00** |",
+ "usage": {
+  "input_tokens": 71,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 786,
+  "output_tokens_details": {
+   "thinking_tokens": 381
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

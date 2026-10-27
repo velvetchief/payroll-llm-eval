@@ -1,0 +1,23 @@
+{
+ "task_id": "T04",
+ "run": 3,
+ "prompt": "An employee has a child support order (entered first) and a later IRS levy (Form 668-W). Disposable pay is $3,100 per period. Set the order and the amounts.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "I can set this up, but I need a few inputs first. The order amount and the levy exemption depend on facts you haven't given me.\n\n**Priority**\n- The earlier child support income withholding order (IWO) is honored first. Withhold the child support amount from disposable pay before applying the IRS levy.\n- The IRS levy then attaches to what remains, after the levy exemption amount is subtracted. Confirm the current levy exemption in IRS Publication 1494 for this employee's filing status, dependents, and pay frequency.\n\n**Child support cap (CCPA, 15 U.S.C. \u00a71673)**\nDisposable earnings are $3,100 per period. The maximum withholding for child support is:\n- 50% = $1,550 (no other family support or arrears)\n- 60% = $1,860 (if the order is for support of a second family or arrears are more than 12 weeks past due)\n- 65% = $2,015 (combined with the 60% condition, if the arrears are more than 12 weeks past due)\n\nWithhold the lesser of the order's stated periodic amount or the applicable cap.\n\n**Worked example (assuming the order states $1,200 per period and a 50% cap applies)**\n1. Child support withheld: $1,200 (below the $1,550 cap)\n2. Remaining after child support: $3,100 \u2212 $1,200 = $1,900\n3. IRS levy exemption: subtract the Pub 1494 exempt amount for this employee. Assume it is $X.\n4. Levy amount: $1,900 \u2212 $X, paid to the IRS.\n\n**What I need to finalize**\n- The child support order's stated amount per period, and whether it includes arrears.\n- Whether the employee supports another spouse or child, and whether arrears are more than 12 weeks past due.\n- Filing status, number of dependents, and pay frequency, for the levy exemption.\n- The date each document was received, to confirm the order of service.\n\nBecause levy and garnishment rules have specific procedural requirements, have your HR or legal team verify the priority and the exemption figures before you finalize the withholding.",
+ "usage": {
+  "input_tokens": 83,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 2421,
+  "output_tokens_details": {
+   "thinking_tokens": 1752
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

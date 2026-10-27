@@ -1,0 +1,23 @@
+{
+ "task_id": "T07",
+ "run": 1,
+ "prompt": "Net pay for 40 employees changed more than 10% from the last run. Here is the data. Explain each change.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "I don't see the data in your message. It may not have attached. Please paste it in, or upload the file, as a table or CSV. The most useful columns are:\n\n- Employee ID or name\n- Previous net pay and current net pay for the same pay period\n- Gross pay for both runs\n- Pre-tax deductions (health, 401(k), HSA, FSA)\n- Post-tax deductions (Roth, garnishments, loans)\n- Tax withholdings (federal, state, local, FICA), and any W-4 or state form changes\n- Hours worked, overtime, bonuses, commissions, or other earnings\n- Pay rate changes, job or status changes, and any unpaid leave\n- Number of pay periods in each run, if they differ\n\nOnce I have it, I'll flag every employee whose net pay moved more than 10%, and for each one I'll show the change in gross pay and in each deduction or tax line that accounts for the difference. I'll also note any changes that look like errors, such as a missing deduction, a withholding that didn't reset, or a pay-period count mismatch, so you can check them before the next run.\n\nCommon causes of this kind of swing include:\n\n- **Pay period count:** a run covering 3 weeks instead of 2, or a semi-monthly versus biweekly mismatch\n- **Bonus or commission** paid in one run but not the other\n- **Overtime** variation\n- **Pre-tax deduction changes**, such as a new 401(k) election or a benefits enrollment\n- **W-4 or state withholding changes**\n- **Annual limit effects**, such as FICA or 401(k) caps being reached late in the year\n- **Unpaid leave** or a partial-period hire or termination\n- **Garnishment or loan deduction** starting or ending\n- **Data-entry or setup errors**",
+ "usage": {
+  "input_tokens": 63,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 642,
+  "output_tokens_details": {
+   "thinking_tokens": 62
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

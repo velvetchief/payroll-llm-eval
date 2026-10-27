@@ -1,0 +1,23 @@
+{
+ "task_id": "T02",
+ "run": 1,
+ "prompt": "An employee earns a $2,000 quarterly bonus. Recompute the overtime regular rate for the quarter.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "# Recomputing the Regular Rate for a $2,000 Quarterly Bonus\n\nI need a few more details to give you an exact figure, but here is the method and a worked example.\n\n## Rule (FLSA, 29 CFR 778.209)\nA quarterly bonus that is nondiscretionary (promised, formula-based, or tied to production, attendance, or performance) must be included in the regular rate. Allocate it back over the workweeks in the quarter in which it was earned, then pay the additional overtime owed.\n\n## Steps\nFor each workweek in the quarter:\n1. **Bonus allocated to the week** = $2,000 \u00f7 number of weeks in the quarter (usually 13), if the bonus accrued evenly. Otherwise, allocate it based on how it was earned.\n2. **New regular rate** = (straight-time pay for all hours + weekly bonus share) \u00f7 total hours worked that week\n3. **Additional OT due** = 0.5 \u00d7 (bonus share \u00f7 total hours that week) \u00d7 OT hours that week, for employees already paid 1.5\u00d7 on base pay\n\nQuarterly shortcut, if hours are fairly consistent:\n**Additional OT = 0.5 \u00d7 ($2,000 \u00f7 total hours in the quarter) \u00d7 total OT hours in the quarter**\n\nThe week-by-week calculation is the more accurate one.\n\n## Example (assumptions only)\n- Hourly rate: $20\n- 13 weeks, 45 hours/week (5 OT hours/week)\n- Weekly base: (40 \u00d7 $20) + (5 \u00d7 $30) = $950\n- Weekly bonus share: $2,000 \u00f7 13 = $153.85\n- New regular rate: ($800 + $200 straight-time for the 45 hrs = $900 + $153.85) \u00f7 45 = **$23.41/hr**\n- Previous regular rate: $20.00\n- Additional OT per week: 0.5 \u00d7 ($153.85 \u00f7 45) \u00d7 5 = **$8.54**\n- Additional OT for the quarter: $8.54 \u00d7 13 \u2248 **$111.10**\n\n## What I need from you to finalize\n- Hourly rate (or salary and how it's calculated)\n- Hours worked and OT hours for each week of the quarter\n- Whether the bonus is nondiscretionary and how it was earned\n- Whether OT is paid at 1.5\u00d7 or under a different arrangement (e.g., fluctuating workweek, which uses a 0.5\u00d7 divisor)\n- Work state, since states like California have different rules (e.g., the bonus-divisor method and double-time hours)\n\nSend those and I'll calculate the exact adjustment and any retro pay owed.",
+ "usage": {
+  "input_tokens": 66,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1136,
+  "output_tokens_details": {
+   "thinking_tokens": 268
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

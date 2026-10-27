@@ -1,0 +1,23 @@
+{
+ "task_id": "T04",
+ "run": 2,
+ "prompt": "An employee has a child support order (entered first) and a later IRS levy (Form 668-W). Disposable pay is $3,100 per period. Set the order and the amounts.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "# Order of withholding\n\n1. **Child support (first):** the order predates the levy.\n2. **IRS levy (Form 668-W):** it takes whatever remains above the exempt amount.\n\n**Why:** Under IRC \u00a76334(a)(8), pay needed to satisfy a child support judgment entered before the levy date is exempt from the levy. This only applies if the order predates the levy, which it does here. Keep a copy of the order in the file. Have the employee complete Part 2 of the Form 668-W (Statement of Exemptions and Filing Status) and return it.\n\n# Amounts\n\n**Step 1: Child support**\n- Withhold the lesser of the amount in the order or the cap.\n- The CCPA cap on $3,100 of disposable pay is:\n  - 50% = **$1,550** (supports a current spouse or child)\n  - 55% = **$1,705** (supports another family, and arrears over 12 weeks)\n  - 60% = **$1,860** (supports another family)\n  - 65% = **$2,015** (supports another family, and arrears over 12 weeks)\n- Use the state cap instead if it is lower.\n\n**Step 2: IRS levy**\n> Levy = Take-home pay \u2212 Pub. 1494 exempt amount \u2212 child support withheld in Step 1\n\n**Illustration only.** I don't have your actual child support figure or the employee's filing status, exemptions, and pay frequency, so the numbers below are hypothetical:\n\n| Item | Amount |\n|---|---|\n| Disposable pay | $3,100 |\n| Child support per order (assumed) | \u2212$800 |\n| Pub. 1494 exempt amount (assumed) | \u2212$900 |\n| **IRS levy** | **$1,400** |\n| Employee net after both | $900 |\n\n# Notes\n- The levy is not subject to the CCPA 50\u201365% caps. It is limited only by the exempt amount.\n- If the child support is more than the cap or more than the pay available, withhold up to the cap. The levy then gets whatever remains above the exempt amount.\n- If the employee doesn't return the exemption statement, treat them as married filing separately with one exemption, as the form instructs.\n- The levy continues until the IRS releases it (Form 668-D).\n- Send the child support to the SDU, and the levy to the IRS address on the form.\n\nSend me the child support amount, the filing status and exemptions from the Part 2 statement, and the pay frequency, and I'll calculate exact figures.",
+ "usage": {
+  "input_tokens": 83,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1891,
+  "output_tokens_details": {
+   "thinking_tokens": 1087
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

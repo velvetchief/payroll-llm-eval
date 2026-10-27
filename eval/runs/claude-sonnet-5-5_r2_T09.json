@@ -1,0 +1,23 @@
+{
+ "task_id": "T09",
+ "run": 2,
+ "prompt": "An employee asks why their check is $180 lower this period. Write the reply from the stub data.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "I don't see any stub data in your message, so I can't tell the employee what actually caused the $180 drop. I don't want to guess and give them wrong information about their pay. If you paste the current and prior pay stubs (redact SSN and account numbers), I'll write the final reply.\n\nIn the meantime, here is a draft with placeholders you can fill in once you've compared the two stubs:\n\n---\n\n**Subject: Your paycheck for the period ending [date]**\n\nHi [Name],\n\nThanks for reaching out. I compared your paycheck for the period ending [date] with your previous one, and your net pay is $180 lower. Here is what changed:\n\n| Item | Previous period | This period | Difference |\n|---|---|---|---|\n| Gross pay | $[ ] | $[ ] | [ ] |\n| Federal/state/local tax | $[ ] | $[ ] | [ ] |\n| Social Security / Medicare | $[ ] | $[ ] | [ ] |\n| Pre-tax deductions (401(k), health, HSA/FSA) | $[ ] | $[ ] | [ ] |\n| Post-tax deductions (garnishment, Roth, etc.) | $[ ] | $[ ] | [ ] |\n| **Net pay** | **$[ ]** | **$[ ]** | **-$180** |\n\n**The main reason:** [e.g., \"You had 8 fewer hours this period, which reduced gross pay by $X,\" or \"Your health insurance premium began on [date], adding a $X deduction.\"]\n\n[If applicable: \"This is [a one-time change / an ongoing change].\"]\n\nIf anything here looks incorrect, or you'd like to update your W-4 or deductions, let me know and I'll look into it right away.\n\nBest,\n[Your name]\nPayroll\n\n---\n\n**Common causes to check on the stubs:**\n- Fewer hours worked, or less overtime, bonus, or commission than last period\n- New or changed benefit deductions (open enrollment, life event)\n- Changed 401(k) contribution percentage\n- Updated W-4 or state withholding form\n- Unpaid leave or PTO running out\n- A new garnishment or loan repayment\n- A prior overpayment being recouped\n- Three-paycheck months or a pay-date shift affecting per-period deductions\n- Supplemental wage tax withheld at a flat rate on a prior bonus (which makes the prior check look higher)\n\nSend the stub details and I'll turn this into a finished reply.",
+ "usage": {
+  "input_tokens": 57,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 896,
+  "output_tokens_details": {
+   "thinking_tokens": 91
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

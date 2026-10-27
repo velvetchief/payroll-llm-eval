@@ -1,0 +1,23 @@
+{
+ "task_id": "T05",
+ "run": 2,
+ "prompt": "An employee in California quits with no notice on Friday. When is final pay due, and what must it include?",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "**California final pay when an employee quits without notice**\n\n**Deadline**\nUnder California Labor Code \u00a7202, an employee who quits without giving at least 72 hours' notice must be paid **within 72 hours of quitting**. Since the employee quit on Friday, final pay is due by **Monday** (the same time of day they quit, counting 72 hours). The employee may also have the option to request that the check be mailed to a designated address, in which case you mail it on the day they quit, or by the deadline.\n\nIf the employee had given at least 72 hours' notice, pay would be due **on their last day of work**.\n\n**What the final paycheck must include**\n- All **earned wages** through the last day worked (regular pay, overtime, double time)\n- **All accrued, unused vacation/PTO**, paid at the final rate of pay (California treats vacation as earned wages, and \"use it or lose it\" policies are illegal)\n- **Commissions and earned bonuses** that have been earned, even if the exact amount needs to be calculated later (pay the undisputed amount on time)\n- **Unreimbursed business expenses** (Labor Code \u00a72802), typically paid promptly as part of the final settlement\n- **Any premium pay owed** for missed meal or rest breaks, if applicable\n- **Reporting time or other pay owed**, if applicable\n\nSick leave does **not** need to be paid out at separation unless company policy combines it with PTO.\n\n**Other requirements**\n- Pay by check, direct deposit (if the employee has previously authorized it), or cash. Pay must be at the location where the employee worked, or at the office in the county where they worked, unless they request mailing.\n- Provide an **itemized final wage statement** (Labor Code \u00a7226) with the final check.\n- Provide the **Notice to Employee as to Change in Relationship** (EDD form DE 2320) and information about unemployment insurance. Also provide COBRA/Cal-COBRA information as applicable.\n- Deductions are limited to those legally permitted; you cannot deduct for unreturned equipment or cash shortages without meeting strict legal conditions.\n\n**Penalties for late payment**\nUnder Labor Code \u00a7203 (\"waiting time penalties\"), the employee earns a day's wages at their daily rate for each day the final pay is late, up to **30 calendar days**. Penalties can apply even if the delay is unintentional, and also if the final check is incorrect or incomplete in a manner that is willful.\n\n**Practical tip:** Calculate the final pay now, including PTO payout, and confirm the Monday deadline with your payroll team to avoid penalties. Consult employment counsel for any unusual situations (e.g., disputed commissions).",
+ "usage": {
+  "input_tokens": 58,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 869,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

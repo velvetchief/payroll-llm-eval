@@ -1,0 +1,179 @@
+{
+ "date": "2026-10-12",
+ "grades": {
+  "claude-opus-5-5": {
+   "1": {
+    "T01": "Pass",
+    "T02": "Pass",
+    "T03": "Pass",
+    "T04": "Pass",
+    "T05": "Pass",
+    "T06": "Partial",
+    "T07": "Pass",
+    "T08": "Pass",
+    "T09": "Pass",
+    "T10": "Pass"
+   },
+   "2": {
+    "T01": "Pass",
+    "T02": "Pass",
+    "T03": "Pass",
+    "T04": "Pass",
+    "T05": "Pass",
+    "T06": "Partial",
+    "T07": "Pass",
+    "T08": "Pass",
+    "T09": "Pass",
+    "T10": "Pass"
+   },
+   "3": {
+    "T01": "Pass",
+    "T02": "Pass",
+    "T03": "Pass",
+    "T04": "Pass",
+    "T05": "Pass",
+    "T06": "Partial",
+    "T07": "Pass",
+    "T08": "Pass",
+    "T09": "Pass",
+    "T10": "Pass"
+   }
+  },
+  "claude-sonnet-5-5": {
+   "1": {
+    "T01": "Pass",
+    "T02": "Pass",
+    "T03": "Pass",
+    "T04": "Pass",
+    "T05": "Pass",
+    "T06": "Partial",
+    "T07": "Pass",
+    "T08": "Pass",
+    "T09": "Pass",
+    "T10": "Pass"
+   },
+   "2": {
+    "T01": "Pass",
+    "T02": "Partial",
+    "T03": "Pass",
+    "T04": "Pass",
+    "T05": "Pass",
+    "T06": "Partial",
+    "T07": "Pass",
+    "T08": "Pass",
+    "T09": "Pass",
+    "T10": "Pass"
+   },
+   "3": {
+    "T01": "Pass",
+    "T02": "Pass",
+    "T03": "Pass",
+    "T04": "Pass",
+    "T05": "Pass",
+    "T06": "Partial",
+    "T07": "Pass",
+    "T08": "Pass",
+    "T09": "Pass",
+    "T10": "Pass"
+   }
+  },
+  "claude-haiku-5-5": {
+   "1": {
+    "T01": "Pass",
+    "T02": "Partial",
+    "T03": "Pass",
+    "T04": "Pass",
+    "T05": "Pass",
+    "T06": "Pass",
+    "T07": "Pass",
+    "T08": "Pass",
+    "T09": "Pass",
+    "T10": "Pass"
+   },
+   "2": {
+    "T01": "Pass",
+    "T02": "Partial",
+    "T03": "Pass",
+    "T04": "Fail",
+    "T05": "Pass",
+    "T06": "Pass",
+    "T07": "Pass",
+    "T08": "Pass",
+    "T09": "Pass",
+    "T10": "Pass"
+   },
+   "3": {
+    "T01": "Pass",
+    "T02": "Partial",
+    "T03": "Pass",
+    "T04": "Fail",
+    "T05": "Pass",
+    "T06": "Pass",
+    "T07": "Pass",
+    "T08": "Pass",
+    "T09": "Pass",
+    "T10": "Pass"
+   }
+  }
+ },
+ "summary": {
+  "claude-opus-5-5": {
+   "run1": {
+    "Pass": 9,
+    "Partial": 1,
+    "Fail": 0
+   },
+   "run2": {
+    "Pass": 9,
+    "Partial": 1,
+    "Fail": 0
+   },
+   "run3": {
+    "Pass": 9,
+    "Partial": 1,
+    "Fail": 0
+   }
+  },
+  "claude-sonnet-5-5": {
+   "run1": {
+    "Pass": 9,
+    "Partial": 1,
+    "Fail": 0
+   },
+   "run2": {
+    "Pass": 8,
+    "Partial": 2,
+    "Fail": 0
+   },
+   "run3": {
+    "Pass": 9,
+    "Partial": 1,
+    "Fail": 0
+   }
+  },
+  "claude-haiku-5-5": {
+   "run1": {
+    "Pass": 9,
+    "Partial": 1,
+    "Fail": 0
+   },
+   "run2": {
+    "Pass": 8,
+    "Partial": 1,
+    "Fail": 1
+   },
+   "run3": {
+    "Pass": 8,
+    "Partial": 1,
+    "Fail": 1
+   }
+  }
+ },
+ "notes": {
+  "T02 Partial": "Federal method correct, but no California flat-sum rule and no request for the work state (criterion 2).",
+  "T06 Partial": "Led with an invented worked example instead of asking for the figures first. Some runs also cited the 2025 401(k) limit for a 2026 task.",
+  "T04 Fail": "Stated the CCPA support caps backwards (50% when the employee supports no other family). A confident wrong number is a fail.",
+  "T03": "All 9 runs flagged the New York convenience of the employer rule.",
+  "settings": "max_tokens 8000 (the first run used 2000). System prompt and tasks unchanged. Graded by hand against the same rubric and answer keys."
+ }
+}

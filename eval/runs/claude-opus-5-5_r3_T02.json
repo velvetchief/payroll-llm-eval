@@ -1,0 +1,23 @@
+{
+ "task_id": "T02",
+ "run": 3,
+ "prompt": "An employee earns a $2,000 quarterly bonus. Recompute the overtime regular rate for the quarter.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-opus-5-5",
+ "response": "# Recomputing the Regular Rate for a $2,000 Quarterly Bonus\n\nI need a few details to give an exact figure, but here is the method, a worked example, and the information I need from you.\n\n## Step 1: Confirm the bonus must be included\n\nUnder the FLSA (29 CFR 778.208\u2013.211), a **nondiscretionary** bonus must be included in the regular rate. This covers bonuses tied to production, attendance, performance metrics, or any bonus promised in advance.\n\nA bonus can be excluded only if it is truly **discretionary**. That means both whether to pay it and how much were decided solely by the employer at or near the end of the period, with no prior promise. Most quarterly bonuses are nondiscretionary.\n\n## Step 2: Allocate the bonus back across the quarter\n\nWhen the bonus can't be tied to specific weeks, it is allocated across the workweeks in the quarter (29 CFR 778.209). For each week:\n\n1. **Bonus allocated to the week** = $2,000 \u00f7 number of workweeks in the quarter (usually 13)\n2. **Bonus increase to the regular rate** = Weekly bonus share \u00f7 total hours worked that week\n3. **Additional OT owed** = Bonus increase \u00d7 0.5 \u00d7 OT hours that week\n\nThe multiplier is 0.5, not 1.5, because the straight-time portion is already covered by the bonus itself.\n\n## Worked Example (assumed figures)\n\nAssumptions: $20/hr base rate, 13 weeks, 45 hours every week (5 OT hours per week).\n\n| Item | Calculation | Result |\n|---|---|---|\n| Bonus per week | $2,000 \u00f7 13 | $153.85 |\n| Bonus increase per hour | $153.85 \u00f7 45 hrs | $3.42 |\n| New regular rate | $20.00 + $3.42 | **$23.42/hr** |\n| New OT rate | $23.42 \u00d7 1.5 | $35.13/hr |\n| Additional OT per week | $3.42 \u00d7 0.5 \u00d7 5 hrs | $8.55 |\n| **Total additional OT due** | $8.55 \u00d7 13 weeks | **\u2248 $111.11** |\n\n**Shortcut when hours are identical every week:** $2,000 \u00f7 585 total hours \u00d7 0.5 \u00d7 65 OT hours = **$111.11**.\n\nIf hours varied week to week, the calculation has to be done week by week. The result will differ from the shortcut.\n\n## What I need to calculate the actual amount\n\n1. The employee's base hourly rate, or salary and FLSA status\n2. Total hours worked **each week** in the quarter\n3. OT hours **each week**\n4. Number of workweeks in the bonus period\n5. The work state\n6. Whether the bonus was promised or formula-based, or purely discretionary\n\n## State-law caution\n\nSome states use different rules. For example, under **California's** *Alvarado* rule, flat-sum bonuses are divided by **non-overtime hours only**, and the result is multiplied by **1.5**. This produces a higher payout than the federal method. Let me know the state and I'll apply the correct rule.\n\nSend the weekly hours and rate, and I'll produce the exact true-up amount for the payroll adjustment.",
+ "usage": {
+  "input_tokens": 66,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1605,
+  "output_tokens_details": {
+   "thinking_tokens": 538
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

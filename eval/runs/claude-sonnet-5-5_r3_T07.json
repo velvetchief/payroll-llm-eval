@@ -1,0 +1,23 @@
+{
+ "task_id": "T07",
+ "run": 3,
+ "prompt": "Net pay for 40 employees changed more than 10% from the last run. Here is the data. Explain each change.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "I don't see any data attached to your message, only the text. Please paste it in, or upload the file, and I'll go through the 40 employees one by one. I won't guess at explanations without the numbers.\n\n**What I need for each employee**\n- Employee ID (or initials, to limit PII)\n- Current and prior period: gross pay, each tax withholding, each deduction, and net pay\n- Pay period dates and pay frequency\n- Earnings breakdown (regular, OT, bonus, commission, PTO, etc.)\n- Any known changes: status, rate, benefits elections, W-4 updates\n\nIf you can, include a variance column for net pay in dollars and percent.\n\n**What I'll check for each employee**\n1. **Gross pay changes**\n   - Hours, overtime, or an unusual number of working days in the period\n   - Bonus, commission, retro pay, or a one-time payment\n   - Rate change, promotion, or new hire or termination proration\n   - Unpaid leave, PTO payout, or a missing timecard\n2. **Tax changes**\n   - Supplemental wage withholding (22% flat or aggregate method) on bonuses\n   - Updated W-4 or state withholding form\n   - A Social Security wage base cap reached, or FUTA/SUTA caps\n   - Local or state tax changes, or a work-location change\n3. **Deduction changes**\n   - Benefits open enrollment or a qualifying life event\n   - 401(k) percentage changes or catch-up contributions\n   - Garnishments, loan repayments, or their completion\n   - A deduction skipped last period and caught up now (or the reverse)\n   - Section 125 pre-tax versus post-tax treatment\n4. **Timing and processing issues**\n   - Off-cycle or manual checks, reversals, or adjustments\n   - A third paycheck month for biweekly employees, or a different number of periods for semi-monthly\n   - Duplicate or missing earnings or deduction codes\n   - Data entry errors\n\n**Output format**\nI'll give you a table with: Employee | Prior Net | Current Net | $ and % change | Driver(s) | Confidence (confirmed from data vs. likely) | Action needed (none, verify, correct before release).\n\nAnything the data can't explain, I'll flag as \"needs verification\" rather than guess. Please send the data when you're ready.",
+ "usage": {
+  "input_tokens": 63,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 835,
+  "output_tokens_details": {
+   "thinking_tokens": 73
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

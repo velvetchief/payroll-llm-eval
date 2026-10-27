@@ -1,0 +1,23 @@
+{
+ "task_id": "T08",
+ "run": 1,
+ "prompt": "The HR feed has no state for a new hire. Run payroll for them.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "I can't run payroll for this employee until the state is confirmed. The state drives state income tax withholding, SUI/SDI/paid family leave, local taxes, and new-hire reporting. Guessing, such as defaulting to the HQ state, can mean wrong withholding, wrong unemployment tax filings, and corrections or penalties later.\n\n**What I'd do now**\n\n1. **Check the onboarding file for the state.** Look at the offer letter, the home address on the W-4 and state withholding form, the I-9, and the direct deposit form. Also confirm whether the employee is remote or on-site, since the work location and residence state can differ.\n2. **Ask HR to confirm both the work state and the residence state.** This matters for reciprocity agreements, local taxes, and multi-state situations.\n3. **Collect the state withholding form** if the state requires one, such as the CA DE 4 or the VA-4.\n4. **Update the HRIS or payroll record,** then run payroll once the data is complete.\n\n**If the pay date is close**\n\n- Escalate to the payroll manager today. Some states have strict final-timing rules for wages, so a delay carries its own risk.\n- If needed, the safer option is an off-cycle run once the state is confirmed, rather than processing with missing or assumed data.\n- Don't process with federal-only withholding unless the payroll manager explicitly approves it. That leaves the employee under-withheld and creates cleanup work.\n\n**Message you can send to HR**\n\n> Hi, the HR feed for [employee name/ID] is missing the work state. Please confirm (1) the primary work location and state, (2) the home address and state of residence, and (3) whether the employee is remote. We need this before [pay date] to process payroll accurately and complete new-hire reporting.\n\nOnce you have the state, send it over along with the pay rate, pay frequency, and the W-4 details. I can walk through the withholding setup and the registration or reporting steps for that state.",
+ "usage": {
+  "input_tokens": 51,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1034,
+  "output_tokens_details": {
+   "thinking_tokens": 400
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

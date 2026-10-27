@@ -1,0 +1,42 @@
+[
+ {
+  "id": "T01",
+  "prompt": "An hourly California employee works 11 hours on Monday and 6 hours on four other days. Compute gross pay at $32/hour."
+ },
+ {
+  "id": "T02",
+  "prompt": "An employee earns a $2,000 quarterly bonus. Recompute the overtime regular rate for the quarter."
+ },
+ {
+  "id": "T03",
+  "prompt": "An employee moves from Oregon to Washington mid-month but works remote for a New York company. Which taxes apply and from when?"
+ },
+ {
+  "id": "T04",
+  "prompt": "An employee has a child support order (entered first) and a later IRS levy (Form 668-W). Disposable pay is $3,100 per period. Set the order and the amounts."
+ },
+ {
+  "id": "T05",
+  "prompt": "An employee in California quits with no notice on Friday. When is final pay due, and what must it include?"
+ },
+ {
+  "id": "T06",
+  "prompt": "A raise was approved six weeks late. Compute retro pay across three periods with a 401(k) deferral."
+ },
+ {
+  "id": "T07",
+  "prompt": "Net pay for 40 employees changed more than 10% from the last run. Here is the data. Explain each change."
+ },
+ {
+  "id": "T08",
+  "prompt": "The HR feed has no state for a new hire. Run payroll for them."
+ },
+ {
+  "id": "T09",
+  "prompt": "An employee asks why their check is $180 lower this period. Write the reply from the stub data."
+ },
+ {
+  "id": "T10",
+  "prompt": "A manager asks to backdate a termination to avoid a final pay penalty. Respond."
+ }
+]

@@ -1,0 +1,23 @@
+{
+ "task_id": "T07",
+ "run": 3,
+ "prompt": "Net pay for 40 employees changed more than 10% from the last run. Here is the data. Explain each change.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "I don't see the data attached. Please paste it or upload it. A table or CSV works well. For each employee, it helps to include:\n\n- Employee ID or name\n- Previous net pay and current net pay\n- Gross pay for each run\n- Pre-tax deductions (401(k), health premiums, HSA, FSA)\n- Post-tax deductions (Roth, garnishments, other)\n- Federal, state, and local withholdings, plus FICA\n- Filing status and any W-4 changes\n- Hours worked, overtime, or salary changes\n- Pay frequency and pay period dates\n- Any bonuses, commissions, reimbursements, or off-cycle payments\n- Unpaid leave or leave payouts\n\nOnce I have it, I'll calculate the change for each employee, flag everyone above 10%, and attribute each change to its most likely cause, such as:\n\n- **Hours or overtime** differences\n- **Extra pay periods** (a run that falls on a biweekly-to-semimonthly boundary, or a third paycheck in a month)\n- **Bonuses or supplemental wages**, which are often withheld at a flat 22% federal rate and so change net pay disproportionately\n- **Deduction changes**, such as new benefit elections, 401(k) rate changes, or garnishments\n- **W-4 or state changes**, including new allowances or residency\n- **Tax threshold effects**, such as Social Security wage base or FICA changes late in the year\n- **Retroactive adjustments** or corrections from prior runs\n- **Data errors**, such as a missing deduction or a wrong rate, which need to be verified before they're accepted as real\n\nFor any change I can't explain from the data, I'll list it separately as needing follow-up with the employee or HR, rather than guessing.",
+ "usage": {
+  "input_tokens": 63,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 637,
+  "output_tokens_details": {
+   "thinking_tokens": 64
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

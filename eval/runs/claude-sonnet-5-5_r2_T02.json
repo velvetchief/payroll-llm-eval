@@ -1,0 +1,23 @@
+{
+ "task_id": "T02",
+ "run": 2,
+ "prompt": "An employee earns a $2,000 quarterly bonus. Recompute the overtime regular rate for the quarter.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "# Recomputing the overtime regular rate with a $2,000 quarterly bonus\n\nI can't give a final number without the employee's hours and pay, but here is the method and a worked example.\n\n## Information I need\n- Hourly rate (or weekly pay if salaried non-exempt)\n- Hours worked each workweek in the quarter, especially overtime hours\n- Whether the bonus is **nondiscretionary**. If it was promised or tied to performance, attendance, or production, it must be included. A truly discretionary bonus, where both the fact and the amount are decided at the company's sole discretion, can be excluded.\n- The state, since some states (e.g., CA) have different rules\n\n## Method (FLSA)\n1. **Allocate the bonus to the weeks in which it was earned.** For a quarter this is usually 13 weeks, so $2,000 \u00f7 13 = $153.85 per week.\n2. **For each week, compute the regular rate:**\n   (Straight-time pay for all hours + weekly bonus allocation) \u00f7 total hours worked that week\n3. **Compute the additional overtime due.** The bonus already pays straight time for all hours, so only the half-time premium is owed:\n   Bonus per hour \u00d7 0.5 \u00d7 overtime hours\n4. Total the additional amounts across the quarter and pay them as a retroactive adjustment, typically with the bonus.\n\n## Example\nAssume $20/hr and 45 hours every week (5 OT hours) for 13 weeks.\n\n- Weekly bonus allocation: $153.85\n- Bonus per hour: $153.85 \u00f7 45 = $3.419\n- **New regular rate:** $20 + $3.419 = **$23.42/hr**\n- New overtime rate: $23.42 \u00d7 1.5 = $35.13/hr (the old rate was $30.00)\n- Additional OT due per week: $3.419 \u00d7 0.5 \u00d7 5 = $8.55\n- **Total owed for the quarter: about $111.11**\n\nAs a check, you can use the quarterly shortcut when weekly hours are known: $2,000 \u00f7 585 total hours = $3.419, and $3.419 \u00d7 0.5 \u00d7 65 OT hours = $111.11.\n\n## Notes\n- This applies only to non-exempt employees. Exempt employees don't receive overtime.\n- If hours varied by week, calculate each week separately, since the regular rate changes weekly.\n- If the bonus can't reasonably be tied to specific weeks, some allocation method must still be applied consistently. Check with payroll or legal counsel.\n\nIf you send the rate and weekly hours, I'll calculate the exact adjustment.",
+ "usage": {
+  "input_tokens": 66,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1431,
+  "output_tokens_details": {
+   "thinking_tokens": 570
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

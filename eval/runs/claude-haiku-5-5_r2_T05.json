@@ -1,0 +1,23 @@
+{
+ "task_id": "T05",
+ "run": 2,
+ "prompt": "An employee in California quits with no notice on Friday. When is final pay due, and what must it include?",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "**Deadline:** Under California Labor Code \u00a7 202, when an employee quits without giving 72 hours' notice, final wages are due **within 72 hours of the quit**. Because 72 hours is counted in calendar hours, not business days, a Friday resignation means final pay is due by the same time on **Monday**. For example, if the employee quit at 10:00 a.m. Friday, payment is due by 10:00 a.m. Monday. Weekends and holidays don't extend the deadline. (If the employee had given 72 hours' notice, final pay would be due at the time of quitting.)\n\n**What the final paycheck must include:**\n- **All earned, unpaid wages** through the last day worked, at the correct rate, including the Friday shift.\n- **Overtime and double time** owed, plus any unpaid meal or rest period premiums.\n- **Earned commissions and bonuses** that are vested under the plan's terms.\n- **Accrued, unused vacation or PTO.** California requires payout of vested vacation (Labor Code \u00a7 227.3) and does not allow forfeiture under a \"use it or lose it\" policy. Sick leave is generally not paid out unless the employer's policy requires it, and it may be reinstated if rehired within a set period under some circumstances.\n- **Expense reimbursements** owed under Labor Code \u00a7 2802 for business expenses.\n- **No unlawful deductions.** Deductions are allowed only if required by law or properly authorized in writing.\n\n**Other requirements:**\n- **Itemized wage statement** (Labor Code \u00a7 226) showing gross and net pay, hours, rates, and deductions. Provide this with the final pay.\n- **Payment method:** Check or direct deposit (if the employee has authorized it). If mailing a check, mail it to the address the employee provided, and treat it as paid on the postmark date.\n- **Penalties:** If final wages are paid late, the employer can owe waiting time penalties under Labor Code \u00a7 203 of up to 30 days' wages, plus interest. Penalties can be assessed for willful late payment, so meeting the 72-hour deadline matters.\n\n**Practical tip:** Calculate the final check right away rather than waiting for the normal payday, and keep proof of the date and method of delivery.\n\nThis is general information, not legal advice. For edge cases, such as disputed hours, commission calculations, or a specific local ordinance, check with your employment counsel.",
+ "usage": {
+  "input_tokens": 58,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1462,
+  "output_tokens_details": {
+   "thinking_tokens": 677
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

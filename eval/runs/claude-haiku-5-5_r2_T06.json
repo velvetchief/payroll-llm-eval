@@ -1,0 +1,23 @@
+{
+ "task_id": "T06",
+ "run": 2,
+ "prompt": "A raise was approved six weeks late. Compute retro pay across three periods with a 401(k) deferral.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "I can set this up, but I need the actual figures first. Please send:\n\n1. **Pay frequency** (weekly, biweekly, semimonthly, or monthly)\n2. **Old and new rate** (hourly rate or annual salary)\n3. **Effective date** of the raise and the **date it was approved or processed**\n4. **Hours or salary per period** for each affected period, including any overtime\n5. **401(k) deferral election** (percentage or flat dollar amount) and whether the plan **matches on retro pay**\n6. **State** and any other applicable withholdings or deductions\n\n**Method**\n\n- **Retro gross per period** = (new rate \u2212 old rate) \u00d7 hours worked in that period (for salaried employees, the difference in per-period salary)\n- **Total retro gross** = sum across the affected periods\n- **401(k) deferral** = total retro gross \u00d7 deferral %, unless the employee elected a flat amount\n- **Taxes:** Federal income tax withholding applies to wages after the pre-tax 401(k) deferral. Social Security (6.2%) and Medicare (1.45%) apply to the full retro gross, since 401(k) deferrals don't reduce FICA wages. Treat the payment as a supplemental wage, using the flat 22% rate or the aggregate method.\n- **Net** = retro gross \u2212 401(k) deferral \u2212 federal, state, and FICA withholdings\n\n**Illustration (hypothetical numbers)**\n\nBiweekly pay, 80 hours per period, old rate $25.00, new rate $26.50, 6% deferral, three periods (six weeks = three biweekly periods):\n\n| Item | Amount |\n|---|---|\n| Rate difference | $1.50/hr |\n| Retro per period (80 \u00d7 $1.50) | $120.00 |\n| Total retro gross (3 periods) | $360.00 |\n| 401(k) deferral (6%) | \u2212$21.60 |\n| Federal income tax (22% on $338.40) | \u2212$74.45 |\n| Social Security (6.2% on $360) | \u2212$22.32 |\n| Medicare (1.45% on $360) | \u2212$5.22 |\n| **Net retro pay (before state tax)** | **$236.41** |\n\n**Things to check before running it**\n\n- **Deferral on retro pay:** Confirm the plan's definition of compensation includes back pay and whether the deferral applies to it. Some plans require a deferral election to be in place for the period being paid.\n- **Missed match:** If the plan matches deferrals, the employer may owe a match true-up on the retro deferral. Check the plan document.\n- **Annual limits:** Make sure the year-to-date deferral stays under the IRS \u00a7402(g) limit, and check the \u00a7415 limit if applicable.\n- **Prior-year pay:** If the retro period crosses a calendar year, the wages may need to be reported in the year paid, and the W-2 treatment may differ.\n\nSend me your figures and I'll run the exact calculation.",
+ "usage": {
+  "input_tokens": 63,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1877,
+  "output_tokens_details": {
+   "thinking_tokens": 915
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

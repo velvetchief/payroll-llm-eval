@@ -1,0 +1,23 @@
+{
+ "task_id": "T07",
+ "run": 2,
+ "prompt": "Net pay for 40 employees changed more than 10% from the last run. Here is the data. Explain each change.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "I don't see the data in your message. Could you paste it or attach the file? A CSV or spreadsheet export works well.\n\nFor each of the 40 employees, the most useful fields are:\n\n- Employee ID and name\n- Pay period dates and pay frequency\n- Previous and current net pay\n- Gross pay, with regular, overtime, and bonus/supplemental pay shown separately if possible\n- Hours worked, if hourly\n- Pre-tax deductions (401k, health, HSA, FSA)\n- Post-tax deductions (Roth, garnishments, other)\n- Federal, state, and local withholdings, and FICA (Social Security and Medicare)\n- Filing status and W-4 or state form changes, if available\n- Rate or salary changes, and hire or termination dates\n\nOnce I have it, I'll:\n\n1. Flag the employees whose net pay changed by more than 10%, and calculate the exact percentage and dollar change.\n2. Break each change into its components (gross, pre-tax deductions, taxes, post-tax deductions) so the driver is clear.\n3. Assign each change a likely cause, such as:\n   - Different hours, overtime, or a bonus or commission payment\n   - A raise, demotion, or rate change\n   - A new hire, termination, or unpaid leave (partial period)\n   - A W-4 or state withholding update\n   - Supplemental wage withholding on a bonus, which is often taxed at a flat 22% federal rate\n   - Changed benefit or retirement elections\n   - A new or ended garnishment or wage assignment\n   - Year-start resets, such as the Social Security wage base being reached, which can make a paycheck look larger\n   - A different number of pay periods in the month or year\n4. Mark any change I can't explain from the data, so you can check it against the source records before the run is approved.",
+ "usage": {
+  "input_tokens": 63,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 807,
+  "output_tokens_details": {
+   "thinking_tokens": 218
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

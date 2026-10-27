@@ -1,0 +1,23 @@
+{
+ "task_id": "T02",
+ "run": 2,
+ "prompt": "An employee earns a $2,000 quarterly bonus. Recompute the overtime regular rate for the quarter.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "The regular rate can't be finalized without the quarter's actual figures. Here's the method and an illustrative calculation.\n\n**What you need**\n- Total hours worked in the quarter (including overtime hours)\n- Overtime hours worked in the quarter\n- Straight-time earnings (hourly rate \u00d7 hours, or salary allocated to the quarter)\n- Confirmation that the $2,000 bonus is nondiscretionary (for example, a production or attendance bonus promised in advance). Discretionary bonuses are excluded from the regular rate under 29 CFR 778.211.\n\n**Method**\n1. Add the bonus to the straight-time compensation for the quarter. Exclude overtime premium pay.\n2. Divide by total hours worked in the quarter to get the recomputed regular rate.\n3. Calculate the additional overtime owed. The bonus already covers straight time for all hours, so only the half-time premium is owed on the overtime hours:\n   - Bonus per hour = $2,000 \u00f7 total hours\n   - Additional OT due = 0.5 \u00d7 (bonus per hour) \u00d7 overtime hours\n\n**Illustration (assumed figures)**\n- Base rate: $20.00/hr\n- Total hours in quarter: 520\n- Overtime hours: 40\n- Straight-time earnings: 520 \u00d7 $20 = $10,400\n- Bonus: $2,000\n\nRecomputed regular rate:\n($10,400 + $2,000) \u00f7 520 = **$23.85/hr** (about $23.846)\n\nAdditional overtime owed for the bonus:\n- Bonus per hour: $2,000 \u00f7 520 = $3.846\n- Half-time premium: 0.5 \u00d7 $3.846 \u00d7 40 OT hours = **$76.92**\n\nAlso check whether the bonus is paid per workweek. If the bonus is tied to the quarter, allocate it evenly across the 13 workweeks (or by actual hours each week) and recompute each week's regular rate. This matters if overtime was uneven across weeks.\n\nIf you send the actual hours, rate, and overtime figures, I'll run the exact calculation.",
+ "usage": {
+  "input_tokens": 66,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1693,
+  "output_tokens_details": {
+   "thinking_tokens": 1005
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

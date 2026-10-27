@@ -1,0 +1,23 @@
+{
+ "task_id": "T09",
+ "run": 2,
+ "prompt": "An employee asks why their check is $180 lower this period. Write the reply from the stub data.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "I don't have the pay stub data yet, so I can't tell the employee the actual cause. If you send me the current and prior stubs, or the line items, I'll write the reply with the exact reasons.\n\nHere's what I'd compare:\n\n- **Gross pay:** fewer hours, a missed or shortened pay period, unpaid leave, or a rate change.\n- **Pre-tax deductions:** new or increased 401(k), HSA/FSA, health premium, or commuter benefit contributions.\n- **Taxes:** a change in federal, state, or local withholding, a new W-4 or state form, or a supplemental payment that was withheld at a higher rate.\n- **Post-tax deductions:** wage garnishments, loan repayments, or other voluntary deductions.\n- **Timing:** a bonus, overtime, or reimbursement in the prior check that didn't repeat, or a pay period with a different number of workdays.\n- **Corrections:** an adjustment to a previous overpayment being recovered.\n\nOnce I have the data, the reply would follow this structure:\n\n> Hi [Name],\n>\n> I reviewed your pay stub for [pay date]. Your net pay is $180 lower than the previous period mainly because of [primary reason, e.g., a $X increase in your 401(k) contribution / a change in state withholding / 12 fewer regular hours]. The breakdown is:\n>\n> - [Item]: [previous amount] \u2192 [current amount]\n> - [Item]: [previous amount] \u2192 [current amount]\n>\n> Your gross pay was [amount], and total deductions were [amount]. If you didn't make this change, or if any line looks wrong, let me know and I'll look into it right away.\n>\n> Thanks,\n> [Your name]",
+ "usage": {
+  "input_tokens": 57,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 679,
+  "output_tokens_details": {
+   "thinking_tokens": 115
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

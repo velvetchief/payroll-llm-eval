@@ -1,0 +1,23 @@
+{
+ "task_id": "T05",
+ "run": 1,
+ "prompt": "An employee in California quits with no notice on Friday. When is final pay due, and what must it include?",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-opus-5-5",
+ "response": "# California Final Pay: Employee Quits Without Notice\n\n## When It's Due\n\n**Within 72 hours of quitting** (Cal. Labor Code \u00a7 202).\n\n- The 72 hours are **calendar hours**, so weekends and holidays count. If the employee quit at 4:00 p.m. Friday, final pay is due by **4:00 p.m. Monday**.\n- If the employee **requests mailing** and gives an address, mailing the check within the 72 hours satisfies the deadline. The postmark date counts as the payment date.\n- For comparison, if the employee had given **at least 72 hours' notice**, final pay would have been due **on their last day**.\n\n**Late payment penalty:** If final pay is willfully late, waiting time penalties under \u00a7 203 accrue at the employee's **full daily wage for each day late, up to 30 days**. \"Willful\" generally means you intentionally failed to pay, even without bad intent.\n\n## What It Must Include\n\n| Item | Required? | Notes |\n|---|---|---|\n| All wages earned through the last day | \u2705 Yes | Regular hours, plus overtime, double time, and any premium pay |\n| Accrued, unused vacation/PTO | \u2705 Yes | Pay at the final rate of pay (\u00a7 227.3). \"Use it or lose it\" forfeiture is not allowed in CA |\n| Earned commissions | \u2705 Yes | Pay if calculable now; otherwise pay per the written commission agreement (\u00a7 2751) |\n| Earned, non-discretionary bonuses | \u2705 Yes | Pay if the conditions were met |\n| Meal/rest period premiums owed | \u2705 Yes | One hour of pay per missed period per day |\n| Unused sick leave | \u274c Generally no | Unless it's part of a combined PTO bank, which then must be paid out |\n| Business expense reimbursements | \u2705 Yes (\u00a7 2802) | Not technically wages, but owed. Pay promptly |\n\n## Other Requirements\n\n- **Itemized wage statement** (\u00a7 226) must accompany the final payment.\n- **Payment method:** The check must be cashable without discount. Use direct deposit only if the employee previously authorized it.\n- **Deductions:** Make only lawful or written-authorized deductions. **Do not withhold pay for unreturned equipment** or other property. Seek return separately.\n- **Separation notices:** Give the *Notice to Employee as to Change in Relationship* and the EDD pamphlet *For Your Benefit* (DE 2320). The DE 2320 is strictly required only for discharges, layoffs, and leaves, but providing it is common practice. Also provide any applicable COBRA/Cal-COBRA notices.\n\n## Quick Action Checklist\n\n1. \u2610 Note the exact date and time of resignation.\n2. \u2610 Calculate hours worked, OT, and any premiums owed.\n3. \u2610 Calculate the vacation/PTO payout at the current rate.\n4. \u2610 Confirm commissions, bonuses, and expense reimbursements.\n5. \u2610 Issue the check and wage statement within 72 hours, or mail them if requested.\n6. \u2610 Document the payment date and method.\n\n*Note: Special rules apply to certain industries, such as motion picture production, oil drilling, and seasonal agricultural work. Check with HR or legal counsel for unusual situations.*",
+ "usage": {
+  "input_tokens": 58,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1944,
+  "output_tokens_details": {
+   "thinking_tokens": 827
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "task_id": "T08",
+ "run": 2,
+ "prompt": "The HR feed has no state for a new hire. Run payroll for them.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "I can't run payroll for this employee until the state is confirmed. I'd rather not guess, because the state drives several things:\n\n- **State income tax withholding**, which depends on the work state, and sometimes the residence state if there's reciprocity\n- **State unemployment (SUI) and other state payroll taxes** such as SDI, PFML, and local taxes\n- **Pay-frequency and final-pay rules**, which vary by state\n- **Whether we're registered to withhold in that state.** If this is our first employee there, we may need to register first.\n\nDefaulting to HQ's state could mean wrong withholding, wrong tax filings, and corrections later.\n\n**To resolve it quickly:**\n1. **Check the onboarding documents.** The offer letter, Form W-4, state withholding form, I-9, and direct deposit/address forms usually show the home address and work location.\n2. **Ask HR or the recruiter** to confirm two things: the **work location state** (and city/locality if applicable) and the **residence state**.\n3. **Confirm remote or hybrid status.** For remote workers, the state where they physically perform the work generally controls.\n4. **Have the employee complete the right state withholding form** if one is required.\n\n**If payday is close:**\n- If the state is confirmed before the cutoff, I'll include them in the regular run.\n- If not, the safest option is to hold them from this run and process an **off-cycle check** as soon as the state is confirmed. Check the applicable state's timing rules for first paychecks so we stay compliant.\n- If leadership wants a provisional run, I'd need that approved and documented, with a plan to true up the withholding. I don't recommend this unless the state is at least narrowed down.\n\n**Longer term:** it's worth asking HR/IT to make state a required field in the feed so records can't come through without it.\n\nIf you send me the state (work and residence), the pay date, and the employee's W-4 and state form details, I'll set them up and run their pay.",
+ "usage": {
+  "input_tokens": 51,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1017,
+  "output_tokens_details": {
+   "thinking_tokens": 386
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

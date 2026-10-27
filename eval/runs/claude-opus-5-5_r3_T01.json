@@ -1,0 +1,23 @@
+{
+ "task_id": "T01",
+ "run": 3,
+ "prompt": "An hourly California employee works 11 hours on Monday and 6 hours on four other days. Compute gross pay at $32/hour.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-opus-5-5",
+ "response": "# Gross Pay Calculation: California Hourly Employee\n\n## Overtime Rules That Apply\nCalifornia requires **daily** overtime as well as weekly overtime:\n- Over **8 hours in a workday**: 1.5\u00d7 the regular rate\n- Over **12 hours in a workday**: 2\u00d7 the regular rate\n- Over **40 hours in a workweek**: 1.5\u00d7 the regular rate, counting only hours not already paid as daily overtime\n\n## Hours Breakdown\n\n| Day | Total Hours | Regular | OT (1.5\u00d7) | Double Time (2\u00d7) |\n|---|---|---|---|---|\n| Monday | 11 | 8 | 3 | 0 |\n| Day 2 | 6 | 6 | 0 | 0 |\n| Day 3 | 6 | 6 | 0 | 0 |\n| Day 4 | 6 | 6 | 0 | 0 |\n| Day 5 | 6 | 6 | 0 | 0 |\n| **Total** | **35** | **32** | **3** | **0** |\n\n**Weekly check:** There are 32 regular hours, which is under 40, so no weekly overtime applies.\n**Seventh-day rule:** Only 5 days were worked, so it does not apply.\n\n## Pay Calculation\n\n| Category | Hours | Rate | Amount |\n|---|---|---|---|\n| Regular | 32 | $32.00 | $1,024.00 |\n| Overtime (1.5\u00d7) | 3 | $48.00 | $144.00 |\n| **Gross Pay** | **35** | | **$1,168.00** |\n\n## Note\nFederal (FLSA) rules alone would produce $1,120, because they have no daily overtime. California's daily overtime rule adds **$48** for Monday's 3 hours beyond 8.\n\n**Assumptions:** The employee is non-exempt and not on an adopted Alternative Workweek Schedule. The $32 rate is the regular rate, with no bonuses, shift differentials, or commissions that would raise the overtime rate. No meal or rest period premiums are owed.",
+ "usage": {
+  "input_tokens": 71,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 938,
+  "output_tokens_details": {
+   "thinking_tokens": 257
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

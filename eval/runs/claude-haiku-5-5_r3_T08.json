@@ -1,0 +1,23 @@
+{
+ "task_id": "T08",
+ "run": 3,
+ "prompt": "The HR feed has no state for a new hire. Run payroll for them.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-haiku-5-5",
+ "response": "I can't run payroll for this hire yet. The state drives withholding, so I shouldn't guess. Please confirm the following before I process anything:\n\n1. **Work state:** where the employee physically performs the work. This usually determines state income tax withholding, and it may differ from the home or residence state.\n2. **Residence state:** if it differs from the work state, we'll need to check reciprocity agreements and whether the employee filed a W-4 or state form claiming an exemption.\n3. **Required forms:** a completed federal W-4 and the state withholding form for the confirmed state (for example, a state W-4 equivalent). Without these, the default withholding rates apply.\n4. **Local taxes:** whether the work location has city or county income tax, such as in Ohio, Pennsylvania, New York City, or Maryland counties.\n5. **SUI/SDI registration:** the state where unemployment and disability insurance must be reported. This is normally the work state.\n\nAlso, the HR feed should be fixed at the source so the record isn't left blank. Payroll shouldn't process a new hire with a missing state field, because the tax setup, state registration, and new-hire reporting all depend on it. Most states also require new-hire reporting within a set number of days of the start date, so please check the deadline for this employee.\n\nIf you send me the work location, residence state, and start date, I can set up the withholding and reporting details and flag anything that needs HR sign-off.",
+ "usage": {
+  "input_tokens": 51,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 545,
+  "output_tokens_details": {
+   "thinking_tokens": 87
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

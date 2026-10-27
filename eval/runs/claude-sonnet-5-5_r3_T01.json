@@ -1,0 +1,23 @@
+{
+ "task_id": "T01",
+ "run": 3,
+ "prompt": "An hourly California employee works 11 hours on Monday and 6 hours on four other days. Compute gross pay at $32/hour.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "**Gross pay: $1,168.00**\n\nCalifornia requires daily overtime, so Monday's hours are split even though the week totals only 35 hours.\n\n| Day | Hours | Regular (up to 8) | OT at 1.5x (over 8, up to 12) |\n|---|---|---|---|\n| Monday | 11 | 8 | 3 |\n| Four other days | 6 each (24 total) | 24 | 0 |\n| **Total** | **35** | **32** | **3** |\n\n- Regular pay: 32 hrs \u00d7 $32.00 = $1,024.00\n- Overtime pay: 3 hrs \u00d7 $48.00 ($32 \u00d7 1.5) = $144.00\n- **Total gross: $1,024.00 + $144.00 = $1,168.00**\n\n**Assumptions:**\n- All 11 and 6 hours are paid working hours. Unpaid meal breaks are already excluded.\n- All days fall in one workweek, and the employee is not on an alternative workweek schedule.\n- The employee did not work seven consecutive days, so the seventh-day overtime rule doesn't apply.\n- The total includes no meal or rest break premium pay, bonuses, or other pay.\n\nWithout the daily overtime rule, the pay would be 35 \u00d7 $32 = $1,120, which would underpay the employee by $48.",
+ "usage": {
+  "input_tokens": 71,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 641,
+  "output_tokens_details": {
+   "thinking_tokens": 212
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

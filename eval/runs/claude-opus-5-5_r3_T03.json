@@ -1,0 +1,23 @@
+{
+ "task_id": "T03",
+ "run": 3,
+ "prompt": "An employee moves from Oregon to Washington mid-month but works remote for a New York company. Which taxes apply and from when?",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-opus-5-5",
+ "response": "# Tax Treatment: Oregon to Washington Move, Remote Employee of a NY Employer\n\n**Key principle:** State payroll taxes follow **where the employee physically works** (and, for income tax, where they live), not where the employer is located. The **move date** is the cutover. Split the pay period that contains the move by days or hours worked in each state, based on when the work was performed, not when it was paid.\n\n## Summary Table\n\n| Tax | Before move (Oregon) | After move (Washington) |\n|---|---|---|\n| Federal income tax, Social Security, Medicare, FUTA | Yes | Yes (no change) |\n| State income tax withholding | **Oregon**, yes | **None**. WA has no wage income tax |\n| Oregon statewide transit tax (0.1%, employee) | Yes | Stops |\n| Paid Leave Oregon (employee and employer shares) | Yes | Stops |\n| WA Paid Family & Medical Leave | No | **Yes**, starts on move date |\n| WA Cares (LTC, employee-paid) | No | **Yes**, unless employee has an approved exemption |\n| WA L&I workers' comp | No | **Yes**, employer and employee hourly share |\n| State unemployment (employer-paid) | Oregon SUI | Washington SUI |\n| Oregon local taxes (TriMet/Lane transit, Metro SHS, Multnomah PFA) | Possibly, depending on where in OR they lived and worked | Stops |\n| New York income tax, NY PFL, NY SUI | Generally **no** (see caution below) | Generally **no** |\n\n## Details\n\n**1. Oregon (through the day before the move)**\n- Withhold Oregon income tax on wages for work performed in Oregon.\n- Withhold the statewide transit tax and Paid Leave Oregon on those wages.\n- If wages for Oregon work days are paid on a later paycheck, they are still Oregon wages.\n\n**2. Washington (from the move date)**\n- No state income tax withholding.\n- Begin Washington PFML and WA Cares deductions. Check the current-year rates.\n- Report the employee for WA L&I workers' comp and WA unemployment.\n- **Registration:** If you don't already have WA accounts with the Employment Security Department and L&I, register before the first WA payroll.\n\n**3. Unemployment wage base**\n- Report wages to Oregon through the move and to Washington afterward.\n- Washington generally lets you credit wages already paid to this employee in Oregon this year toward the WA taxable wage base, so you don't restart from zero.\n\n**4. New York caution**\n- NY's \"convenience of the employer\" rule can tax nonresidents who work remotely for their own convenience when their assigned base is a NY office.\n- If the employee was **hired as fully remote** and has no NY office assignment, NY withholding generally does not apply.\n- If they are assigned to a NY office and simply chose to work from home, NY may claim the wages. Confirm the employee's official work location before deciding.\n\n## Action Items\n1. Get the exact move date and the new WA address in writing.\n2. Update the work and resident state in payroll effective that date. Prorate the split pay period.\n3. Register in WA if needed, and set up PFML, WA Cares, L&I, and SUI.\n4. Close out Oregon items for this employee. Keep the OR accounts open if you have other OR employees.\n5. At year-end, the W-2 will show Oregon wages and withholding only for the pre-move portion. The employee files an Oregon part-year resident return (OR-40-P).\n\nIf the employee works any days back in Oregon after the move, those days are Oregon-source wages and subject to Oregon nonresident withholding. Track travel days.",
+ "usage": {
+  "input_tokens": 68,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 2509,
+  "output_tokens_details": {
+   "thinking_tokens": 1280
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "task_id": "T02",
+ "run": 3,
+ "prompt": "An employee earns a $2,000 quarterly bonus. Recompute the overtime regular rate for the quarter.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "# Recomputing the Overtime Regular Rate with a $2,000 Quarterly Bonus\n\nI need the employee's hours and pay rate to give you a final number, but here is the method and a worked example.\n\n## Rule\nUnder the FLSA (29 CFR 778.209), a **non-discretionary** bonus, such as one tied to production, attendance, or a preset goal, must be included in the regular rate. The bonus is allocated back to the workweeks in which it was earned, and overtime is recalculated for each of those weeks. A truly discretionary bonus, where both the fact and the amount are at the employer's sole discretion and not promised, is excluded.\n\n## Steps\n1. **Allocate the bonus to the weeks it was earned.** If it was earned evenly, that's $2,000 \u00f7 13 weeks \u2248 $153.85 per week.\n2. **For each week, compute the bonus per hour:** weekly bonus \u00f7 total hours worked that week.\n3. **Compute the additional overtime due (half-time):** bonus per hour \u00d7 0.5 \u00d7 overtime hours. Half-time is used because straight time for all hours was already paid through the bonus.\n4. **Sum across the quarter** and pay it as a retroactive adjustment.\n\n## Example\nAssume $20/hr and 45 hours every week for 13 weeks.\n\n| Item | Calculation | Result |\n|---|---|---|\n| Weekly bonus allocation | $2,000 \u00f7 13 | $153.85 |\n| Bonus per hour | $153.85 \u00f7 45 | $3.42 |\n| New regular rate | $20.00 + $3.42 | $23.42 |\n| Additional OT per week | $3.42 \u00d7 0.5 \u00d7 5 hrs | $8.55 |\n| **Quarter total owed** | $8.55 \u00d7 13 | **\u2248 $111.11** |\n\nQuick check: $2,000 \u00f7 585 total hours \u00d7 0.5 \u00d7 65 OT hours = $111.11.\n\n## What I need to finalize\n- Hourly rate (or salary, if salaried non-exempt)\n- Actual hours worked each week in the quarter, especially overtime weeks\n- Whether the bonus is non-discretionary and how it was earned\n- Any other pay that must be included in the regular rate, such as shift differentials or commissions\n- The work state, since some states (e.g., California) have different rules\n\nSend those details and I'll calculate the exact adjustment.",
+ "usage": {
+  "input_tokens": 66,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1400,
+  "output_tokens_details": {
+   "thinking_tokens": 600
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

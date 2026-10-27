@@ -1,0 +1,23 @@
+{
+ "task_id": "T06",
+ "run": 2,
+ "prompt": "A raise was approved six weeks late. Compute retro pay across three periods with a 401(k) deferral.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "# Retro pay across three periods with a 401(k) deferral\n\nYou didn't give figures, so here is the method, a worked example with assumed numbers, and the details I need to run your actual case.\n\n## Method\n\n1. **Find the retro period.** Six weeks late is three biweekly periods (or six weekly, or about 1.5 semi-monthly). Use the effective date of the raise, not the approval date.\n2. **Recalculate gross for each period.** Compute what should have been paid, then subtract what was paid. For hourly employees, redo overtime, shift differentials and other rate-based pay at the new rate.\n3. **Apply the 401(k) election.** If the deferral is a percentage of eligible pay, apply it to the retro gross. If it is a flat dollar amount, usually nothing changes. Check the plan document's definition of eligible compensation.\n4. **Check limits.** Make sure the added deferral doesn't push the employee past the IRS 402(g) limit, and check 415 and the HCE/ADP testing implications.\n5. **True up the employer match.** Recalculate the match on the retro-adjusted pay each period, especially if the match is calculated per pay period.\n6. **Calculate taxes.**\n   - Federal income tax: the 401(k) deferral reduces taxable wages. Retro pay paid in a separate check can be treated as supplemental wages (22% flat). Paid with regular wages, it is aggregated.\n   - Social Security and Medicare: the 401(k) deferral does **not** reduce FICA wages.\n   - State and local: rules vary, so check the state's supplemental rate and any local taxes.\n7. **Report correctly.** Pay the retro in the current period, and don't amend prior periods' payroll records unless your policy requires it.\n\n## Worked example (assumed numbers)\n\n- Biweekly salaried employee. Old salary is $78,000 ($3,000 per period). New salary is $83,200 ($3,200 per period).\n- Three periods are affected.\n- The 401(k) deferral is 6% pre-tax. The employer match is 50% of deferrals up to 6%.\n- Retro is paid as a separate supplemental payment, with federal withholding at the 22% flat rate. State tax is ignored.\n\n| Item | Per period | 3 periods |\n|---|---|---|\n| Retro gross ($3,200 \u2212 $3,000) | $200.00 | **$600.00** |\n| 401(k) deferral at 6% | $12.00 | **$36.00** |\n| Federal taxable wages (gross \u2212 401(k)) | $188.00 | $564.00 |\n| Federal income tax at 22% | $41.36 | $124.08 |\n| Social Security at 6.2% (on full gross) | $12.40 | $37.20 |\n| Medicare at 1.45% (on full gross) | $2.90 | $8.70 |\n| **Net retro pay** | | **$394.02** |\n| Employer match at 50% of deferral | $6.00 | **$18.00** |\n\nNet = $600.00 \u2212 $36.00 \u2212 $124.08 \u2212 $37.20 \u2212 $8.70 = **$394.02**.\n\n## What I need to run your actual numbers\n\n- Pay frequency and the exact effective date of the raise\n- Old and new pay rate, and for hourly staff the hours, overtime and differentials in each period\n- 401(k) election (percent or dollar amount, pre-tax or Roth) and year-to-date deferrals\n- Match formula and whether it is calculated per period or annually\n- Whether the retro will be a separate check or included in regular pay\n- State and local tax jurisdiction\n- Any other deductions affected by gross pay (garnishments, HSA, benefits tied to salary)\n\nSend those and I'll produce the period-by-period calculation.",
+ "usage": {
+  "input_tokens": 63,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 1814,
+  "output_tokens_details": {
+   "thinking_tokens": 578
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

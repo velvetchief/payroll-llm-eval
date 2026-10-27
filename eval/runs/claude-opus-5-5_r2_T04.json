@@ -1,0 +1,23 @@
+{
+ "task_id": "T04",
+ "run": 2,
+ "prompt": "An employee has a child support order (entered first) and a later IRS levy (Form 668-W). Disposable pay is $3,100 per period. Set the order and the amounts.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-opus-5-5",
+ "response": "# Child Support Order + IRS Levy (Form 668-W)\n\n## Order of Withholding\n\n**1. Child support first.** Under IRC \u00a76334(a)(8), child support withheld under an order entered before the levy is exempt from the levy. Because the support order came first, it takes priority.\n\n**2. IRS levy second.** It applies only to what remains after the support deduction and the levy's own exempt amount.\n\n## Step 1: Child Support Amount\n\nWithhold the amount stated on the income withholding order, up to the federal CCPA limit (or a lower state limit, if one applies). Based on disposable earnings of $3,100:\n\n| Employee situation | CCPA max | Max on $3,100 |\n|---|---|---|\n| Supporting another spouse or child | 50% | $1,550 |\n| Supporting another spouse or child, arrears over 12 weeks | 55% | $1,705 |\n| Not supporting another spouse or child | 60% | $1,860 |\n| Not supporting another spouse or child, arrears over 12 weeks | 65% | $2,015 |\n\nThe order should indicate which limit applies. If it doesn't, confirm with the issuing agency.\n\n## Step 2: IRS Levy Amount\n\nThe levy is not subject to CCPA limits. Calculate it as follows:\n\n**Levy = Take-home pay \u2212 Child support \u2212 Exempt amount (Pub. 1494)**\n\n- **Take-home pay** is gross pay minus taxes and any payroll deductions that were already in effect before the levy date. If the $3,100 is net of taxes only, also subtract any pre-existing voluntary deductions, such as insurance or 401(k). Deductions the employee starts after the levy cannot be subtracted.\n- **Exempt amount** comes from the current year's IRS Publication 1494. It depends on:\n  - pay frequency\n  - filing status\n  - number of dependents\n\n  The employee reports filing status and dependents on Parts 3\u20136 of the 668-W. If the employee doesn't return the statement within 3 days, use married filing separately with zero dependents.\n\n## Illustrative Example\n\nThis assumes a $700 support order and a $1,200 Pub. 1494 exempt amount. Substitute your actual figures.\n\n| Item | Amount |\n|---|---|\n| Disposable / take-home pay | $3,100 |\n| Child support (priority) | \u2212$700 |\n| Pub. 1494 exempt amount | \u2212$1,200 |\n| **IRS levy** | **$1,200** |\n| Employee receives | $1,200 |\n\n## Information Needed for Exact Amounts\n\n- The support order amount and which CCPA percentage applies\n- Pay frequency\n- The employee's 668-W Statement of Exemptions (filing status and dependents)\n- Whether any voluntary deductions were in place before the levy date\n\n## Ongoing Requirements\n\n- The levy is continuous. Keep withholding every pay period until you receive Form 668-D (Release of Levy).\n- Remit the support payment to the State Disbursement Unit.\n- Remit the levy payment to the IRS as instructed on the form.\n- If pay or deductions change, recalculate the levy each period.\n- Recalculate the exempt amount each January when the new Pub. 1494 is released.\n\nSend me the missing details and I'll calculate the exact amounts.",
+ "usage": {
+  "input_tokens": 83,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 2045,
+  "output_tokens_details": {
+   "thinking_tokens": 959
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

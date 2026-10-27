@@ -1,0 +1,23 @@
+{
+ "task_id": "T07",
+ "run": 1,
+ "prompt": "Net pay for 40 employees changed more than 10% from the last run. Here is the data. Explain each change.",
+ "system": "You are a payroll assistant at a US company. Answer the request.",
+ "model": "claude-sonnet-5-5",
+ "response": "No data came through with your message, only the text. I can't explain the changes without it, and I don't want to guess at causes for 40 employees.\n\n**What I need (employee ID rather than name or SSN, if possible)**\nFor both the current and prior run:\n- Pay period dates and pay date\n- Gross pay, broken out by earning code (regular, OT, bonus, commission, PTO, retro, etc.)\n- Pre-tax deductions (401k, health, HSA, FSA)\n- Taxes (federal, FICA, state/local)\n- Post-tax deductions (garnishments, loans, Roth, etc.)\n- Net pay and % change\n- Hours worked and pay rate, if available\n\nA payroll register comparison or variance report export (CSV or pasted table) works well.\n\n**What I'll do with it**\nFor each employee, I'll identify the main driver of the change, quantify it, and flag whether it looks expected or needs review. The usual causes:\n\n| Category | Examples |\n|---|---|\n| Gross pay changes | Overtime swings, bonus or commission, retro pay, rate increase, unpaid leave, a different number of pay days or hours |\n| Tax changes | Supplemental withholding on bonuses (22% flat), W-4 update, hitting the Social Security wage base, state or local changes |\n| Deduction changes | Open enrollment, new or ended garnishment, 401k election change, benefit catch-up or refund |\n| Timing or one-time items | Off-cycle payment, reimbursement, imputed income, third-party sick pay |\n| Possible errors | Duplicate earnings, missing deductions, wrong rate, terminated employee still paid, manual overrides |\n\n**Output**\nA table with employee ID, prior net, current net, $ and % change, the explanation, and a status of Expected, Verify, or Likely error. I'll also add a summary of the common themes, such as \"18 of 40 are from the bonus run.\"\n\nPlease paste the data or upload the file and I'll start. If you can't share everything, even the earnings and deduction breakdowns for the biggest movers will help.",
+ "usage": {
+  "input_tokens": 63,
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "cache_creation": {
+   "ephemeral_5m_input_tokens": 0,
+   "ephemeral_1h_input_tokens": 0
+  },
+  "output_tokens": 794,
+  "output_tokens_details": {
+   "thinking_tokens": 115
+  },
+  "service_tier": "standard",
+  "inference_geo": "global"
+ }
+}

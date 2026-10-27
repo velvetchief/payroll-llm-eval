@@ -59,6 +59,12 @@ python run.py     # one run of claude-opus-5-5, writes T01.json to T10.json
 python run3.py    # 3 models x 3 runs, writes runs/<model>_r<run>_T<id>.json
 ```
 
+The tests check that the grade files, the raw outputs and the claims in this README agree. They make no API calls:
+
+```bash
+python -m unittest discover tests
+```
+
 `ANTHROPIC_WORKSPACE_ID` is optional. If it is set, the scripts send it as the workspace header. `run3.py` skips any output file that already exists, so you can stop it and start it again.
 
 Grading is by hand. To grade a new run, read each output against [eval/answer_keys.md](eval/answer_keys.md) and record the grade and a note in the same format as the scores files.
@@ -73,3 +79,4 @@ Grading is by hand. To grade a new run, read each output against [eval/answer_ke
 | `eval/T01.json` to `eval/T10.json` | Raw answers from the first run |
 | `eval/runs/` | Raw answers from the 90 repeat runs |
 | `eval/scores.json`, `eval/scores_3x3.json` | Grades and notes |
+| `tests/` | Consistency tests for the grades, the raw outputs and this README |

@@ -4,7 +4,8 @@ import json
 import os
 import urllib.request
 
-tasks = [t["prompt"] for t in json.load(open("tasks.json"))]
+with open("tasks.json") as f:
+    tasks = [t["prompt"] for t in json.load(f)]
 assert len(tasks) == 10
 SYS = "You are a payroll assistant at a US company. Answer the request."
 
@@ -32,7 +33,8 @@ def run(i):
     txt = "".join(c.get("text", "") for c in d["content"])
     record = {"task_id": f"T{i+1:02d}", "prompt": tasks[i], "system": SYS,
               "model": d["model"], "response": txt, "usage": d.get("usage")}
-    json.dump(record, open(f"T{i+1:02d}.json", "w"), indent=1)
+    with open(f"T{i+1:02d}.json", "w") as f:
+        json.dump(record, f, indent=1)
     return i
 
 

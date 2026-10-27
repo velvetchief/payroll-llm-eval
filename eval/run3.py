@@ -6,7 +6,8 @@ import os
 import time
 import urllib.request
 
-tasks = [t["prompt"] for t in json.load(open("tasks.json"))]
+with open("tasks.json") as f:
+    tasks = [t["prompt"] for t in json.load(f)]
 assert len(tasks) == 10
 SYS = "You are a payroll assistant at a US company. Answer the request."
 MODELS = ["claude-opus-5-5", "claude-sonnet-5-5", "claude-haiku-5-5"]
@@ -41,7 +42,7 @@ def run(job):
             req = urllib.request.Request("https://api.anthropic.com/v1/messages", body, headers())
             d = json.load(urllib.request.urlopen(req, timeout=240))
             break
-        except Exception as e:
+        except (OSError, ValueError) as e:  # network, HTTP and JSON errors
             err = str(e)
             time.sleep(5 * (attempt + 1))
     else:
@@ -49,7 +50,8 @@ def run(job):
     txt = "".join(c.get("text", "") for c in d["content"])
     record = {"task_id": f"T{i+1:02d}", "run": k, "prompt": tasks[i], "system": SYS,
               "model": d["model"], "response": txt, "usage": d.get("usage")}
-    json.dump(record, open(out, "w"), indent=1)
+    with open(out, "w") as f:
+        json.dump(record, f, indent=1)
     return out
 
 
